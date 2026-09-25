@@ -23,15 +23,21 @@ This project consumes the [EU-Innovation-Panel](https://github.com/andrm101/eu-i
 
 ## Architecture
 
+Pipeline stages live in `scripts/` as `p0_...` through `p9_...` (not a separate `src/` package) — each stage's tabular/JSON output is written to `analysis/`, and the final brief to `reports/`:
+
 ```mermaid
 flowchart TD
-    UpstreamGold["EU-Innovation-Panel<br/>Gold layer (242x66)"] --> Silver["data/silver<br/>+ electricity, renewables,<br/>grid, water proxies"]
-    NewData["12 new datasets<br/>(energy, grid, water, regulatory)"] --> Silver
-    Silver --> Cluster["k=4 re-clustering<br/>(interpretability override)"]
-    Cluster --> Types["8 suitability type scores<br/>+ uncertainty"]
-    Types --> Gold["data/gold"]
-    Gold --> Hypotheses["Registered structural<br/>hypotheses RQ1-RQ6"]
-    Gold --> Reports["reports/ + figures/"]
+    UpstreamGold["EU-Innovation-Panel<br/>Gold layer (242x66)"] --> P1["scripts/p1_data_inventory.py"]
+    P1 --> P1b["scripts/p1b_download.py<br/>12 new datasets"]
+    P1b --> P2["scripts/p2_ingest_harmonise.py<br/>k=4 re-clustering"]
+    P2 --> P4["scripts/p4_suitability_scores.py<br/>8 type composite indices"]
+    P4 --> P5["scripts/p5_shortlist_gap.py<br/>threshold >=0.70 + gap analysis"]
+    P5 --> P6["scripts/p6_spatial_analysis.py<br/>corridors, Moran's I, LISA"]
+    P6 --> P7["scripts/p7_feasibility.py<br/>I-O matrix, gate results"]
+    P7 --> P8["scripts/p8_dashboard.py"]
+    P7 --> P9["scripts/p9_report.py<br/>-> reports/p9_executive_brief.md"]
+    P4 --> Analysis["analysis/ — CSV/JSON<br/>per-stage outputs"]
+    Analysis --> Hypotheses["Registered structural<br/>hypotheses RQ1-RQ6"]
 ```
 
 ## Pre-registered structural hypotheses (Popper contract)
