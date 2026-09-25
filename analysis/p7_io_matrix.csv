@@ -1,0 +1,65 @@
+from_type,to_type,dependency_strength,rationale
+T1,T1,0,
+T1,T2,2,Shared computational talent; AI accelerates omics/drug-discovery pipelines
+T1,T3,0,
+T1,T4,0,
+T1,T5,3,AI compute requires stable low-cost power + hyperscale connectivity
+T1,T6,0,
+T1,T7,0,
+T1,T8,2,Quantum ML acceleration; frontier AI labs co-locate with quantum compute
+T2,T1,2,Large omics datasets require AI/ML processing infrastructure
+T2,T2,0,
+T2,T3,0,
+T2,T4,0,
+T2,T5,0,
+T2,T6,0,
+T2,T7,0,
+T2,T8,0,
+T3,T1,0,
+T3,T2,0,
+T3,T3,0,
+T3,T4,0,
+T3,T5,0,
+T3,T6,0,
+T3,T7,3,Semiconductor supply chain directly feeds robotics precision components
+T3,T8,0,
+T4,T1,0,
+T4,T2,0,
+T4,T3,0,
+T4,T4,0,
+T4,T5,2,Renewable PPA offtake drives data-centre clean-power procurement
+T4,T6,2,Complementary baseload (nuclear) + variable (renewables) grid mix
+T4,T7,0,
+T4,T8,0,
+T5,T1,0,
+T5,T2,0,
+T5,T3,0,
+T5,T4,3,Data-centre renewable demand creates cleantech buildout incentive
+T5,T5,0,
+T5,T6,2,SMR baseload removes renewable intermittency constraint for 24/7 DC ops
+T5,T7,0,
+T5,T8,0,
+T6,T1,0,
+T6,T2,0,
+T6,T3,0,
+T6,T4,2,HALEU-SMR grid integration requires cleantech storage and management
+T6,T5,0,
+T6,T6,0,
+T6,T7,0,
+T6,T8,2,"Nuclear quantum sensing (isotope ID, reactor diagnostics) links T6-T8"
+T7,T1,0,
+T7,T2,0,
+T7,T3,3,Robotics embedded systems and precision actuators sourced from T3 fabs
+T7,T4,0,
+T7,T5,0,
+T7,T6,0,
+T7,T7,0,
+T7,T8,0,
+T8,T1,2,Quantum optimisation algorithms structurally input to next-gen AI/ML
+T8,T2,0,
+T8,T3,0,
+T8,T4,0,
+T8,T5,0,
+T8,T6,2,Quantum sensing applications in nuclear non-proliferation and diagnostics
+T8,T7,0,
+T8,T8,0,

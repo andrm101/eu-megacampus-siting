@@ -1,0 +1,129 @@
+{
+  "tier1_threshold": 0.7,
+  "tier2_threshold": 0.6,
+  "uncertainty_halfwidth": 0.1,
+  "gap_percentile": 25,
+  "n_regions": 242,
+  "types": {
+    "T1": {
+      "label": "AI / ML Hub",
+      "n_tier1": 25,
+      "n_tier2": 24,
+      "n_shortlisted": 49,
+      "score_mean": 0.423,
+      "score_std": 0.205,
+      "uncertainty_mean": 0.08,
+      "structural_readiness_median": 0.8,
+      "top_gap_features": [
+        "electricity_price_eur_kwh",
+        "cit_rate_pct",
+        "doing_business_score"
+      ]
+    },
+    "T2": {
+      "label": "Biotechnology / Life Sciences",
+      "n_tier1": 19,
+      "n_tier2": 27,
+      "n_shortlisted": 46,
+      "score_mean": 0.432,
+      "score_std": 0.187,
+      "uncertainty_mean": 0.051,
+      "structural_readiness_median": 0.889,
+      "top_gap_features": [
+        "electricity_price_eur_kwh",
+        "gerd_hes_pct_gdp",
+        "doing_business_score"
+      ]
+    },
+    "T3": {
+      "label": "Semiconductors / Advanced Electronics",
+      "n_tier1": 17,
+      "n_tier2": 18,
+      "n_shortlisted": 35,
+      "score_mean": 0.41,
+      "score_std": 0.187,
+      "uncertainty_mean": 0.246,
+      "structural_readiness_median": 0.889,
+      "top_gap_features": [
+        "electricity_price_eur_kwh",
+        "artificial_land_pct",
+        "doing_business_score"
+      ]
+    },
+    "T4": {
+      "label": "Cleantech / Green Technology",
+      "n_tier1": 52,
+      "n_tier2": 25,
+      "n_shortlisted": 77,
+      "score_mean": 0.503,
+      "score_std": 0.24,
+      "uncertainty_mean": 0.163,
+      "structural_readiness_median": 0.75,
+      "top_gap_features": [
+        "score_talent",
+        "doing_business_score",
+        "lq_nace_d35_clean"
+      ]
+    },
+    "T5": {
+      "label": "Hyperscale Data Centre Hub",
+      "n_tier1": 13,
+      "n_tier2": 8,
+      "n_shortlisted": 21,
+      "score_mean": 0.378,
+      "score_std": 0.204,
+      "uncertainty_mean": 0.091,
+      "structural_readiness_median": 0.75,
+      "top_gap_features": [
+        "electricity_price_eur_kwh",
+        "ultrafast_broadband_pct",
+        "ntc_import_mw"
+      ]
+    },
+    "T6": {
+      "label": "HALEU / Advanced Nuclear",
+      "n_tier1": 16,
+      "n_tier2": 22,
+      "n_shortlisted": 38,
+      "score_mean": 0.396,
+      "score_std": 0.227,
+      "uncertainty_mean": 0.687,
+      "structural_readiness_median": 0.833,
+      "top_gap_features": [
+        "lq_nace_c21_m72",
+        "gerd_def_pct_gdp",
+        "ntc_import_mw"
+      ]
+    },
+    "T7": {
+      "label": "Deep-Tech Robotics Campus",
+      "n_tier1": 8,
+      "n_tier2": 24,
+      "n_shortlisted": 32,
+      "score_mean": 0.406,
+      "score_std": 0.169,
+      "uncertainty_mean": 0.054,
+      "structural_readiness_median": 0.875,
+      "top_gap_features": [
+        "gerd_hes_pct_gdp",
+        "doing_business_score",
+        "epo_patents_per_mio_pop"
+      ]
+    },
+    "T8": {
+      "label": "Quantum / Photonics Anchor",
+      "n_tier1": 53,
+      "n_tier2": 53,
+      "n_shortlisted": 106,
+      "score_mean": 0.544,
+      "score_std": 0.198,
+      "uncertainty_mean": 0.451,
+      "structural_readiness_median": 0.857,
+      "top_gap_features": [
+        "ultrafast_broadband_pct",
+        "score_talent",
+        "score_cluster"
+      ]
+    }
+  }
+}

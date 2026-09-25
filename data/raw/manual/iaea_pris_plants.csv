@@ -1,0 +1,39 @@
+country_code,nuts2_code,plant_name,reactor_units,net_capacity_mw,status,source
+BE,BE21,Doel,3,2884,operational,IAEA PRIS
+BE,BE33,Tihange,2,1863,operational,IAEA PRIS
+BG,BG31,Kozloduy,2,2006,operational,IAEA PRIS
+CZ,CZ064,Dukovany,4,2040,operational,IAEA PRIS
+CZ,CZ031,Temelin,2,2160,operational,IAEA PRIS
+FI,FI196,Olkiluoto,3,2890,operational,IAEA PRIS
+FI,FI1B1,Loviisa,2,996,operational,IAEA PRIS
+FR,FRF3,Cattenom,4,5448,operational,IAEA PRIS
+FR,FRE1,Gravelines,6,5706,operational,IAEA PRIS
+FR,FRI1,Tricastin,4,3612,operational,IAEA PRIS
+FR,FRI1,Cruas-Meysse,4,3480,operational,IAEA PRIS
+FR,FRI2,Saint-Alban,2,2660,operational,IAEA PRIS
+FR,FRJ2,Golfech,2,2620,operational,IAEA PRIS
+FR,FRD1,Paluel,4,5320,operational,IAEA PRIS
+FR,FRD1,Penly,2,2660,operational,IAEA PRIS
+FR,FRD2,Flamanville,2,2652,operational,IAEA PRIS
+FR,FRC1,Belleville,2,2620,operational,IAEA PRIS
+FR,FRC1,Dampierre-en-Burly,4,3480,operational,IAEA PRIS
+FR,FRC1,Saint-Laurent-des-Eaux,2,1830,operational,IAEA PRIS
+FR,FRB0,Chinon,4,3480,operational,IAEA PRIS
+FR,FRB0,Civaux,2,2936,operational,IAEA PRIS
+FR,FRL0,Nogent-sur-Seine,2,2620,operational,IAEA PRIS
+FR,FRL0,Chooz,2,2936,operational,IAEA PRIS
+HU,HU211,Paks,4,2000,operational,IAEA PRIS
+HU,HU211,Paks II,2,2400,under_construction,IAEA PRIS
+NL,NL341,Borssele,1,515,operational,IAEA PRIS
+RO,RO22,Cernavoda,2,1400,operational,IAEA PRIS
+SK,SK021,Bohunice V1/V2,2,880,operational,IAEA PRIS
+SK,SK021,Mochovce 1-4,4,1760,operational,IAEA PRIS
+SI,SI042,Krsko,1,730,operational,IAEA PRIS
+ES,ES43,Almaraz,2,1982,operational,IAEA PRIS
+ES,ES51,Asco,2,2012,operational,IAEA PRIS
+ES,ES52,Cofrentes,1,1092,operational,IAEA PRIS
+ES,ES42,Trillo,1,1066,operational,IAEA PRIS
+ES,ES51,Vandellos II,1,1087,operational,IAEA PRIS
+SE,SE12,Forsmark,3,3139,operational,IAEA PRIS
+SE,SE21,Oskarshamn,1,1400,operational,IAEA PRIS
+SE,SE23,Ringhals,2,1880,operational,IAEA PRIS

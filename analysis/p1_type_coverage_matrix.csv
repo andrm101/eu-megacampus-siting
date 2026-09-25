@@ -1,0 +1,9 @@
+type_id,n_features_upstream,features,n_new_datasets,has_data_gap,data_gap_severity_max
+T1,13,"gdp_per_capita_pps, hrst_per_1000, tertiary_enrolment_rate, employment_rate, broadband_penetration_pct, rd_expenditure_pct_gdp, business_rd_pct_gdp, epo_patents_per_mio_pop, hi_tech_employment_pct, gva_ict_share...",3,True,2
+T2,10,"gdp_per_capita_pps, hrst_per_1000, tertiary_enrolment_rate, employment_rate, rd_expenditure_pct_gdp, business_rd_pct_gdp, epo_patents_per_mio_pop, hi_tech_employment_pct, lq_nace_c21_m72, score_talent",3,True,2
+T3,10,"gdp_per_capita_pps, hrst_per_1000, employment_rate, rd_expenditure_pct_gdp, business_rd_pct_gdp, epo_patents_per_mio_pop, hi_tech_employment_pct, population_density, lq_nace_c26, score_talent",6,True,2
+T4,7,"gdp_per_capita_pps, employment_rate, rd_expenditure_pct_gdp, business_rd_pct_gdp, epo_patents_per_mio_pop, lq_nace_d35_clean, is_transition_region",4,False,0
+T5,8,"gdp_per_capita_pps, employment_rate, broadband_penetration_pct, gva_ict_share, population_density, enterprise_internet_use, lq_nace_j62j63, lq_nace_d35_clean",8,True,3
+T6,6,"gdp_per_capita_pps, employment_rate, rd_expenditure_pct_gdp, business_rd_pct_gdp, population_density, lq_nace_d35_clean",8,True,2
+T7,10,"gdp_per_capita_pps, hrst_per_1000, tertiary_enrolment_rate, employment_rate, rd_expenditure_pct_gdp, business_rd_pct_gdp, epo_patents_per_mio_pop, hi_tech_employment_pct, lq_nace_c26, score_talent",3,True,2
+T8,10,"gdp_per_capita_pps, hrst_per_1000, tertiary_enrolment_rate, employment_rate, broadband_penetration_pct, rd_expenditure_pct_gdp, business_rd_pct_gdp, epo_patents_per_mio_pop, hi_tech_employment_pct, score_talent",5,True,3

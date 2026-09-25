@@ -1,0 +1,86 @@
+{
+  "io_matrix_max": 3,
+  "io_total_links": 14,
+  "io_strong_links": 4,
+  "scenario_thresholds": {
+    "A_tier1_min": 0.7,
+    "B_tier2_min": 0.6,
+    "B_sr_min": 0.7,
+    "C_sr_min": 0.5,
+    "C_max_gate_fails": 2
+  },
+  "types": {
+    "T1": {
+      "label": "AI / ML Hub",
+      "n_gates": 2,
+      "n_hard_stops": 0,
+      "regions_all_gates_passed": 143,
+      "scenario_A": 25,
+      "scenario_B": 24,
+      "scenario_C": 0
+    },
+    "T2": {
+      "label": "Biotechnology / Life Sciences",
+      "n_gates": 2,
+      "n_hard_stops": 0,
+      "regions_all_gates_passed": 161,
+      "scenario_A": 16,
+      "scenario_B": 26,
+      "scenario_C": 4
+    },
+    "T3": {
+      "label": "Semiconductors / Advanced Electronics",
+      "n_gates": 2,
+      "n_hard_stops": 0,
+      "regions_all_gates_passed": 128,
+      "scenario_A": 13,
+      "scenario_B": 18,
+      "scenario_C": 4
+    },
+    "T4": {
+      "label": "Cleantech / Green Technology",
+      "n_gates": 1,
+      "n_hard_stops": 0,
+      "regions_all_gates_passed": 168,
+      "scenario_A": 45,
+      "scenario_B": 21,
+      "scenario_C": 11
+    },
+    "T5": {
+      "label": "Hyperscale Data Centre Hub",
+      "n_gates": 3,
+      "n_hard_stops": 0,
+      "regions_all_gates_passed": 92,
+      "scenario_A": 13,
+      "scenario_B": 8,
+      "scenario_C": 0
+    },
+    "T6": {
+      "label": "HALEU / Advanced Nuclear",
+      "n_gates": 2,
+      "n_hard_stops": 1,
+      "regions_all_gates_passed": 96,
+      "scenario_A": 16,
+      "scenario_B": 21,
+      "scenario_C": 0
+    },
+    "T7": {
+      "label": "Deep-Tech Robotics Campus",
+      "n_gates": 2,
+      "n_hard_stops": 0,
+      "regions_all_gates_passed": 157,
+      "scenario_A": 7,
+      "scenario_B": 24,
+      "scenario_C": 1
+    },
+    "T8": {
+      "label": "Quantum / Photonics Anchor",
+      "n_gates": 1,
+      "n_hard_stops": 0,
+      "regions_all_gates_passed": 208,
+      "scenario_A": 53,
+      "scenario_B": 53,
+      "scenario_C": 0
+    }
+  }
+}

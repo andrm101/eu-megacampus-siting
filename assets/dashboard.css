@@ -1,0 +1,196 @@
+/* ── EU MegaCampus Siting Intelligence — Dashboard Styles ── */
+
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+
+/* ── Global font override ───────────────────────────────── */
+*, body, html, input, button, select, textarea {
+    font-family: 'Space Grotesk', sans-serif !important;
+}
+
+/* ── Plotly font injection (targets SVG text inside charts) */
+.js-plotly-plot .plotly text {
+    font-family: 'Space Grotesk', sans-serif !important;
+}
+
+/* ── Dropdown: control bar ──────────────────────────────── */
+.Select-control {
+    background-color: #0d1529 !important;
+    border: 1px solid #2a4060 !important;
+    border-radius: 4px !important;
+    min-height: 34px !important;
+}
+.Select-control:hover {
+    border-color: #00a8ff !important;
+    box-shadow: 0 0 0 1px #00a8ff40 !important;
+}
+.Select.is-focused .Select-control {
+    border-color: #00a8ff !important;
+    box-shadow: 0 0 0 2px #00a8ff30 !important;
+}
+
+/* ── Dropdown: selected value and placeholder ───────────── */
+.Select-value-label, .Select-single-value {
+    color: #d8eaff !important;
+    font-size: 12px !important;
+    font-weight: 500 !important;
+}
+.Select-placeholder {
+    color: #6a8fb0 !important;
+    font-size: 12px !important;
+}
+.Select-input > input {
+    color: #d8eaff !important;
+    font-family: 'Space Grotesk', sans-serif !important;
+}
+
+/* ── Dropdown: arrow and clear button ───────────────────── */
+.Select-arrow-zone .Select-arrow {
+    border-top-color: #6a8fb0 !important;
+}
+.Select-clear-zone .Select-clear {
+    color: #6a8fb0 !important;
+}
+
+/* ── Dropdown: open menu container ─────────────────────── */
+.Select-menu-outer {
+    background-color: #0d1a30 !important;
+    border: 1px solid #2a4060 !important;
+    border-top: none !important;
+    border-radius: 0 0 4px 4px !important;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.6) !important;
+    z-index: 9999 !important;
+}
+
+/* ── Dropdown: individual options ───────────────────────── */
+.Select-option {
+    background-color: #0d1a30 !important;
+    color: #c8daf0 !important;
+    font-size: 12px !important;
+    font-family: 'Space Grotesk', sans-serif !important;
+    padding: 9px 14px !important;
+    cursor: pointer !important;
+    transition: background 0.12s ease;
+}
+.Select-option.is-focused {
+    background-color: #1a3050 !important;
+    color: #ffffff !important;
+}
+.Select-option.is-selected {
+    background-color: rgba(0, 168, 255, 0.18) !important;
+    color: #00a8ff !important;
+    font-weight: 600 !important;
+}
+.Select-option.is-disabled {
+    color: #3a5070 !important;
+}
+
+/* ── Multi-value tags (multi-select) ────────────────────── */
+.Select-multi-value-wrapper .Select-value {
+    background-color: rgba(0, 168, 255, 0.15) !important;
+    border: 1px solid #00a8ff50 !important;
+    border-radius: 3px !important;
+    color: #00a8ff !important;
+    font-size: 11px !important;
+}
+.Select-value-icon {
+    border-right: 1px solid #00a8ff50 !important;
+    color: #6a8fb0 !important;
+}
+.Select-value-icon:hover {
+    background-color: rgba(255, 51, 85, 0.2) !important;
+    color: #ff3355 !important;
+}
+
+/* ── Scrollbar in dropdown list ─────────────────────────── */
+.Select-menu::-webkit-scrollbar { width: 5px; }
+.Select-menu::-webkit-scrollbar-track { background: #0a0f1e; }
+.Select-menu::-webkit-scrollbar-thumb { background: #2a4060; border-radius: 3px; }
+
+/* ── RadioItems ─────────────────────────────────────────── */
+.dash-radioitems label {
+    color: #b8cce0 !important;
+    font-size: 12px !important;
+    cursor: pointer !important;
+}
+.dash-radioitems input[type="radio"]:checked + label,
+.dash-radioitems input[type="radio"]:checked ~ label {
+    color: #00a8ff !important;
+    font-weight: 600 !important;
+}
+
+/* ── DataTable header / cells ───────────────────────────── */
+.dash-spreadsheet-container .dash-header {
+    font-family: 'Space Grotesk', sans-serif !important;
+    font-size: 11px !important;
+    font-weight: 600 !important;
+    letter-spacing: 0.04em !important;
+}
+.dash-spreadsheet-container .dash-cell {
+    font-family: 'Space Grotesk', sans-serif !important;
+    font-size: 11px !important;
+}
+
+/* ── Tabs (override Bootstrap/Dash defaults) ────────────── */
+/* Target every possible selector Dash/Bootstrap can produce */
+.custom-tab,
+div.custom-tab,
+.tab.custom-tab,
+a.custom-tab,
+.nav-link.custom-tab {
+    background-color: #0d1529 !important;
+    color: #8ab8d8 !important;
+    border-bottom: 2px solid transparent !important;
+    border-top: 2px solid transparent !important;
+    border-left: none !important;
+    border-right: none !important;
+    padding: 10px 18px !important;
+    font-size: 12px !important;
+    font-weight: 500 !important;
+    font-family: 'Space Grotesk', sans-serif !important;
+    letter-spacing: 0.06em !important;
+    transition: color 0.15s ease, border-color 0.15s ease;
+    text-decoration: none !important;
+    cursor: pointer;
+}
+.custom-tab:hover,
+div.custom-tab:hover,
+a.custom-tab:hover,
+.nav-link.custom-tab:hover {
+    color: #c8dff4 !important;
+    border-bottom-color: #2a4060 !important;
+    background-color: #0d1529 !important;
+    text-decoration: none !important;
+}
+.custom-tab--selected,
+div.custom-tab--selected,
+a.custom-tab--selected,
+.nav-link.custom-tab--selected {
+    background-color: #0a0f1e !important;
+    color: #00a8ff !important;
+    border-top: 2px solid #00a8ff !important;
+    border-bottom: 2px solid transparent !important;
+    font-weight: 600 !important;
+    text-decoration: none !important;
+}
+
+/* Bootstrap .nav-link active/hover states */
+.nav-tabs .nav-link { color: #8ab8d8 !important; }
+.nav-tabs .nav-link:hover { color: #c8dff4 !important; }
+.nav-tabs .nav-link.active { color: #00a8ff !important; }
+
+/* Dash tab container strip */
+.tab-container, .tabs-container {
+    background-color: #0d1529 !important;
+    border-bottom: 1px solid #2a4060 !important;
+}
+
+/* Ensure header bar text is always readable */
+.app-header span {
+    color: inherit !important;
+}
+
+/* ── Page scrollbar ─────────────────────────────────────── */
+::-webkit-scrollbar { width: 7px; height: 7px; }
+::-webkit-scrollbar-track { background: #0a0f1e; }
+::-webkit-scrollbar-thumb { background: #2a4060; border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: #3a5a80; }

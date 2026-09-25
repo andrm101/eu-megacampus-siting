@@ -1,0 +1,28 @@
+country_code,country_name,cit_rate_pct,reference_year,source
+AT,Austria,25.0,2022,OECD Table II.1 / EC Tax-benefit systems
+BE,Belgium,25.0,2022,OECD Table II.1 / EC Tax-benefit systems
+BG,Bulgaria,10.0,2022,OECD Table II.1 / EC Tax-benefit systems
+CY,Cyprus,12.5,2022,OECD Table II.1 / EC Tax-benefit systems
+CZ,Czech Republic,19.0,2022,OECD Table II.1 / EC Tax-benefit systems
+DE,Germany,15.825,2022,OECD Table II.1 / EC Tax-benefit systems
+DK,Denmark,22.0,2022,OECD Table II.1 / EC Tax-benefit systems
+EE,Estonia,20.0,2022,OECD Table II.1 / EC Tax-benefit systems
+ES,Spain,25.0,2022,OECD Table II.1 / EC Tax-benefit systems
+FI,Finland,20.0,2022,OECD Table II.1 / EC Tax-benefit systems
+FR,France,25.83,2022,OECD Table II.1 / EC Tax-benefit systems
+GR,Greece,22.0,2022,OECD Table II.1 / EC Tax-benefit systems
+HR,Croatia,18.0,2022,OECD Table II.1 / EC Tax-benefit systems
+HU,Hungary,9.0,2022,OECD Table II.1 / EC Tax-benefit systems
+IE,Ireland,12.5,2022,OECD Table II.1 / EC Tax-benefit systems
+IT,Italy,24.0,2022,OECD Table II.1 / EC Tax-benefit systems
+LT,Lithuania,15.0,2022,OECD Table II.1 / EC Tax-benefit systems
+LU,Luxembourg,17.0,2022,OECD Table II.1 / EC Tax-benefit systems
+LV,Latvia,20.0,2022,OECD Table II.1 / EC Tax-benefit systems
+MT,Malta,35.0,2022,OECD Table II.1 / EC Tax-benefit systems
+NL,Netherlands,25.8,2022,OECD Table II.1 / EC Tax-benefit systems
+PL,Poland,19.0,2022,OECD Table II.1 / EC Tax-benefit systems
+PT,Portugal,21.0,2022,OECD Table II.1 / EC Tax-benefit systems
+RO,Romania,16.0,2022,OECD Table II.1 / EC Tax-benefit systems
+SE,Sweden,20.6,2022,OECD Table II.1 / EC Tax-benefit systems
+SI,Slovenia,19.0,2022,OECD Table II.1 / EC Tax-benefit systems
+SK,Slovakia,21.0,2022,OECD Table II.1 / EC Tax-benefit systems

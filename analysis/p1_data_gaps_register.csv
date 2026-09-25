@@ -1,0 +1,8 @@
+variable,type_affected,gap_severity,reason,proxy,proxy_quality,uncertainty_label
+quantum_patents_nuts2_ipc,T8,3,"No public NUTS2 IPC sub-class patent data (G06N10, H01L, B82Y) from free sources",EPO total patent density (epo_patents_per_mio_pop) + EuroHPC proximity score + national_quantum_flag,moderate,high
+robotics_patents_nuts2_ipc,T7,2,No public NUTS2 IPC sub-class patent data (B25J) from free sources,machinery/automotive LQ (lq_nace_c26 partial) + BERD + CORDIS EIC funding (if available),low-moderate,high
+haleu_patents_nuts2_ipc,T6,2,No NUTS2 IPC nuclear patent sub-class from free sources,nuclear_capacity_proximity + chemical_lq (C20) + nuclear_policy_flag,low-moderate,high
+grid_headroom_nuts2_mw,T5,3,No public NUTS2 available grid capacity dataset exists,ENTSO-E country NTC import surplus (inverse of net import balance) + electricity price index,low,high
+industrial_land_cost_nuts2,"T3, T5, T6",2,MSCI/CBRE industrial RE indices are licensed; no NUTS2 public benchmark,inverse(GDP per capita PPS) + CLC2018 industrial land share (D12),moderate,moderate
+vc_dealflow_nuts2,"T1, T2, T7",2,Dealroom/Crunchbase are licensed; no free NUTS2 VC deal flow data,CORDIS EIC funding per NUTS2 (if CORDIS available) or business_rd_pct_gdp,low-moderate,moderate
+cordis_horizon_eu_nuts2,"T1, T2, T7, T8",1,CORDIS bulk CSV was 404 in EU-Innovation-Panel pipeline; URL relocated,CORDIS is publicly available at data.europa.eu/data/datasets — re-attempt download,potentially full coverage if re-downloaded,low-moderate

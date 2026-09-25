@@ -1,0 +1,19 @@
+site_name,tier,country_code,nuts2_code,city,host,capacity_pflops_approx
+LUMI,world_class,FI,FI1D5,Kajaani,CSC,550
+Leonardo,world_class,IT,ITH5,Bologna,CINECA,250
+MareNostrum 5,world_class,ES,ES51,Barcelona,BSC,200
+JUPITER,world_class,DE,DEA2,Juelich,JSC/FZJ,1000
+Jules Verne,world_class,FR,FR10,Paris,GENCI/CEA,1000
+Meluxina,pre_petascale,LU,LU00,Bissen,LuxProvide,18
+Vega,pre_petascale,SI,SI031,Maribor,IZUM,7
+Karolina,pre_petascale,CZ,CZ080,Ostrava,IT4I,15
+Discoverer,pre_petascale,BG,BG41,Sofia,Sofia Tech Park,6
+Deucalion,pre_petascale,PT,PT11,Braga,MACC/U.Minho,10
+Helios,pre_petascale,PL,PL213,Krakow,CYFRONET,15
+Arrhenius,pre_petascale,SE,SE11,Stockholm,KTH/NAISS,15
+Daedalus,pre_petascale,GR,EL30,Athens,GRNET/ARIS,8
+Cineca-HPC5,national,IT,ITH5,Bologna,CINECA,50
+HAWK,national,DE,DE11,Stuttgart,HLRS,26
+SuperMUC-NG,national,DE,DE21,Munich/Garching,LRZ,27
+JUWELS,national,DE,DEA2,Juelich,JSC,71
+Jean Zay,national,FR,FR10,Paris/Saclay,IDRIS/CNRS,36

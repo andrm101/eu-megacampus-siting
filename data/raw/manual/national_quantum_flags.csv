@@ -1,0 +1,28 @@
+country_code,has_quantum_programme,tier,programme_name,source
+AT,1,2,Austria Quantum (AQT),aqt.eu
+BE,1,2,QuantX Belgium / imec quantum,imec-int.com
+BG,0,0,,no dedicated national programme
+CY,0,0,,no dedicated national programme
+CZ,1,2,Czech National Quantum Initiative (NQI),nqit.cz
+DE,1,3,Quantum Computing Initiative / BMBF QT,dlr.de/de/forschung/quantencomputing
+DK,1,2,Danish National Strategy for Quantum,ufm.dk
+EE,0,1,Emerging programmes via EU Flagship,qt.eu
+ES,1,2,Spanish National Plan for Quantum Technologies,cdti.es
+FI,1,3,Finnish Quantum Institute (InstituteQ),instituteq.fi
+FR,1,3,Plan national Quantique (PNQ) €1.8B,enseignementsup-recherche.gouv.fr
+GR,1,1,GSRT Quantum programme,elidek.gr
+HR,0,0,,no dedicated national programme
+HU,1,2,Hungarian Quantum Technology NE,kvantumteknologia.hu
+IE,1,2,SFI Quantum 2030 initiative,sfi.ie
+IT,1,3,ICSC National HPC/Quantum Center,supercomputing-icsc.it
+LT,0,1,EU Flagship participation only,qt.eu
+LU,1,2,LIST Quantum / LuxProvide programmes,list.lu
+LV,0,0,,no dedicated national programme
+MT,0,0,,no dedicated national programme
+NL,1,3,Quantum Delta NL €615M,quantumdelta.nl
+PL,1,2,NCBR / NASK quantum programmes,ncbr.gov.pl
+PT,1,1,PT quantum via EuroHPC+InQubator,inl.int
+RO,0,0,,no dedicated national programme
+SE,1,3,Wallenberg Centre for Quantum Technology (WACQT),chalmers.se/en/centres/wacqt
+SI,0,1,IJS quantum research groups,ijs.si
+SK,0,1,EU Flagship participation only,qt.eu

@@ -1,0 +1,28 @@
+country_code,nuclear_policy,notes,haleu_smr_eligible
+AT,BANNED,Constitutional ban since 1978 (Zwentendorf referendum). Strongest legal barrier.,False
+BE,NEUTRAL,2025 10-year extension of Doel 4 and Tihange 3 reversed earlier phase-out. SMR interest expressed.,True
+BG,PRO,Kozloduy operating; Belene project revived under energy security agenda.,True
+CY,NO_NUCLEAR,No nuclear infrastructure or plans.,False
+CZ,PRO,Dukovany 5 new unit approved; Temelin 3&4 under consideration.,True
+DE,PHASE_OUT,All plants closed April 2023. Phase-out complete. No SMR pathway under current law.,False
+DK,NO_NUCLEAR,No nuclear; 1985 law prohibits. Some SMR discussion but no policy change.,False
+EE,NO_NUCLEAR,Fermi Energia pursuing SMR (Rolls-Royce); policy not yet enabling.,False
+ES,PHASE_OUT,Phased closure 2027-2035 per national plan. Operating currently.,False
+FI,PRO,Olkiluoto 3 operational 2023. Hanhikivi 1 stalled. Strong nuclear culture.,True
+FR,PRO,6 new EPRs announced (Macron 2022); SMR programme via Nuward. Largest EU nuclear fleet.,True
+GR,NO_NUCLEAR,No nuclear infrastructure. Some academic SMR interest.,False
+HR,NEUTRAL,Partial owner of Krsko (SI). Limited independent nuclear capacity.,True
+HU,PRO,Paks II under construction (VVER-1200 with Rosatom). Active nuclear expansion.,True
+IE,NO_NUCLEAR,1999 Electricity Act prohibits nuclear. No change expected.,False
+IT,PHASE_OUT,1987 referendum shut all plants. 2011 second referendum confirmed ban. Newcleo (FR-based) SMR discussion.,False
+LT,NO_NUCLEAR,Ignalina closed 2009 (EU accession requirement). Visaginas project stalled.,False
+LU,NO_NUCLEAR,No nuclear; consistent opposition.,False
+LV,NO_NUCLEAR,No nuclear infrastructure.,False
+MT,NO_NUCLEAR,No nuclear infrastructure.,False
+NL,PRO,2 new plants announced (Borssele site); SMR feasibility study ongoing.,True
+PL,PRO,First nuclear plant in development (Westinghouse AP1000). Strong policy push.,True
+PT,NO_NUCLEAR,No nuclear; research reactor only. No policy change.,False
+RO,PRO,Cernavoda 3&4 development approved. NuScale SMR agreement signed.,True
+SE,PRO,Phase-out reversed 2023-2024. New nuclear legislation enabling. Vattenfall restart discussions.,True
+SI,PRO,Krsko 2 (JEK 2) approved in 2022 referendum. Under development.,True
+SK,PRO,Mochovce 3&4 completed 2023-2024. Strong nuclear base.,True

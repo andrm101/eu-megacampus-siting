@@ -1,0 +1,66 @@
+type_id,type_label,feature,weight,weight_label,direction,is_proxy,pct_of_type_weight
+T1,AI / ML Hub,score_talent,3,HIGH,+,False,14.3
+T1,AI / ML Hub,score_infra,3,HIGH,+,False,14.3
+T1,AI / ML Hub,lq_nace_j62j63,3,HIGH,+,False,14.3
+T1,AI / ML Hub,hrst_per_1000,2,MEDIUM,+,False,9.5
+T1,AI / ML Hub,ultrafast_broadband_pct,2,MEDIUM,+,False,9.5
+T1,AI / ML Hub,business_rd_pct_gdp,2,MEDIUM,+,False,9.5
+T1,AI / ML Hub,epo_patents_per_mio_pop,2,MEDIUM,+,False,9.5
+T1,AI / ML Hub,doing_business_score,2,MEDIUM,+,False,9.5
+T1,AI / ML Hub,cit_rate_pct,1,LOW,-,False,4.8
+T1,AI / ML Hub,electricity_price_eur_kwh,1,LOW,-,False,4.8
+T2,Biotechnology / Life Sciences,score_talent,3,HIGH,+,False,15.0
+T2,Biotechnology / Life Sciences,lq_nace_c21_m72,3,HIGH,+,False,15.0
+T2,Biotechnology / Life Sciences,hrst_per_1000,3,HIGH,+,False,15.0
+T2,Biotechnology / Life Sciences,gerd_hes_pct_gdp,3,HIGH,+,False,15.0
+T2,Biotechnology / Life Sciences,epo_patents_per_mio_pop,2,MEDIUM,+,False,10.0
+T2,Biotechnology / Life Sciences,score_cluster,2,MEDIUM,+,False,10.0
+T2,Biotechnology / Life Sciences,doing_business_score,2,MEDIUM,+,False,10.0
+T2,Biotechnology / Life Sciences,cit_rate_pct,1,LOW,-,False,5.0
+T2,Biotechnology / Life Sciences,electricity_price_eur_kwh,1,LOW,-,False,5.0
+T3,Semiconductors / Advanced Electronics,lq_nace_c26,3,HIGH,+,False,16.7
+T3,Semiconductors / Advanced Electronics,electricity_price_eur_kwh,3,HIGH,-,False,16.7
+T3,Semiconductors / Advanced Electronics,score_talent,2,MEDIUM,+,False,11.1
+T3,Semiconductors / Advanced Electronics,hrst_per_1000,2,MEDIUM,+,False,11.1
+T3,Semiconductors / Advanced Electronics,rail_freight_ktonnes,2,MEDIUM,+,False,11.1
+T3,Semiconductors / Advanced Electronics,port_throughput_ktonnes,2,MEDIUM,+,True,11.1
+T3,Semiconductors / Advanced Electronics,doing_business_score,2,MEDIUM,+,False,11.1
+T3,Semiconductors / Advanced Electronics,artificial_land_pct,1,LOW,+,False,5.6
+T3,Semiconductors / Advanced Electronics,cit_rate_pct,1,LOW,-,False,5.6
+T4,Cleantech / Green Technology,renewable_energy_share_pct,3,HIGH,+,False,20.0
+T4,Cleantech / Green Technology,lq_nace_d35_clean,3,HIGH,+,False,20.0
+T4,Cleantech / Green Technology,gerd_gov_pct_gdp,2,MEDIUM,+,False,13.3
+T4,Cleantech / Green Technology,esif_absorption_rate,2,MEDIUM,+,True,13.3
+T4,Cleantech / Green Technology,is_transition_region,2,MEDIUM,+,False,13.3
+T4,Cleantech / Green Technology,doing_business_score,1,LOW,+,False,6.7
+T4,Cleantech / Green Technology,score_talent,1,LOW,+,False,6.7
+T4,Cleantech / Green Technology,electricity_price_eur_kwh,1,LOW,-,False,6.7
+T5,Hyperscale Data Centre Hub,electricity_price_eur_kwh,3,HIGH,-,False,15.8
+T5,Hyperscale Data Centre Hub,ntc_import_mw,3,HIGH,+,False,15.8
+T5,Hyperscale Data Centre Hub,renewable_energy_share_pct,3,HIGH,+,False,15.8
+T5,Hyperscale Data Centre Hub,ultrafast_broadband_pct,3,HIGH,+,False,15.8
+T5,Hyperscale Data Centre Hub,water_exploitation_index,2,MEDIUM,-,False,10.5
+T5,Hyperscale Data Centre Hub,artificial_land_pct,2,MEDIUM,+,False,10.5
+T5,Hyperscale Data Centre Hub,doing_business_score,2,MEDIUM,+,False,10.5
+T5,Hyperscale Data Centre Hub,score_infra,1,LOW,+,False,5.3
+T6,HALEU / Advanced Nuclear,haleu_smr_eligible_int,3,HIGH,+,True,25.0
+T6,HALEU / Advanced Nuclear,nuclear_capacity_mw_log1p,3,HIGH,+,True,25.0
+T6,HALEU / Advanced Nuclear,gerd_def_pct_gdp,2,MEDIUM,+,True,16.7
+T6,HALEU / Advanced Nuclear,ntc_import_mw,2,MEDIUM,+,False,16.7
+T6,HALEU / Advanced Nuclear,lq_nace_c21_m72,1,LOW,+,False,8.3
+T6,HALEU / Advanced Nuclear,score_cost,1,LOW,+,False,8.3
+T7,Deep-Tech Robotics Campus,lq_nace_c26,3,HIGH,+,False,17.6
+T7,Deep-Tech Robotics Campus,score_talent,3,HIGH,+,False,17.6
+T7,Deep-Tech Robotics Campus,hrst_per_1000,2,MEDIUM,+,False,11.8
+T7,Deep-Tech Robotics Campus,gerd_hes_pct_gdp,2,MEDIUM,+,False,11.8
+T7,Deep-Tech Robotics Campus,epo_patents_per_mio_pop,2,MEDIUM,+,False,11.8
+T7,Deep-Tech Robotics Campus,score_cluster,2,MEDIUM,+,False,11.8
+T7,Deep-Tech Robotics Campus,doing_business_score,2,MEDIUM,+,False,11.8
+T7,Deep-Tech Robotics Campus,rail_freight_ktonnes,1,LOW,+,False,5.9
+T8,Quantum / Photonics Anchor,quantum_programme_tier,3,HIGH,+,True,18.8
+T8,Quantum / Photonics Anchor,eurohpc_proximity_score,3,HIGH,+,True,18.8
+T8,Quantum / Photonics Anchor,score_talent,3,HIGH,+,False,18.8
+T8,Quantum / Photonics Anchor,gerd_hes_pct_gdp,2,MEDIUM,+,False,12.5
+T8,Quantum / Photonics Anchor,epo_patents_per_mio_pop,2,MEDIUM,+,False,12.5
+T8,Quantum / Photonics Anchor,ultrafast_broadband_pct,2,MEDIUM,+,False,12.5
+T8,Quantum / Photonics Anchor,score_cluster,1,LOW,+,False,6.2

@@ -1,0 +1,9 @@
+moran_i,expected_i,z_score,p_value,p_sim,n,type_id,type_label
+0.5572,-0.0041,11.6079,0.0,0.001,242,T1,AI / ML Hub
+0.6061,-0.0041,12.6193,0.0,0.001,242,T2,Biotechnology / Life Sciences
+0.6138,-0.0041,12.7793,0.0,0.001,242,T3,Semiconductors / Advanced Electronics
+0.7123,-0.0041,14.8152,0.0,0.001,242,T4,Cleantech / Green Technology
+0.8945,-0.0041,18.5827,0.0,0.001,242,T5,Hyperscale Data Centre Hub
+0.7078,-0.0041,14.7238,0.0,0.001,242,T6,HALEU / Advanced Nuclear
+0.6375,-0.0041,13.2685,0.0,0.001,242,T7,Deep-Tech Robotics Campus
+0.8119,-0.0041,16.8751,0.0,0.001,242,T8,Quantum / Photonics Anchor

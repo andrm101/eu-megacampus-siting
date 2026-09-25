@@ -1,0 +1,257 @@
+{
+  "features": {
+    "nuts2_name": {
+      "null_rate": 0.0
+    },
+    "country_code": {
+      "null_rate": 0.0
+    },
+    "gdp_per_capita_pps": {
+      "null_rate": 0.0
+    },
+    "population": {
+      "null_rate": 0.0
+    },
+    "hrst_per_1000": {
+      "null_rate": 0.0
+    },
+    "tertiary_enrolment_rate": {
+      "null_rate": 0.0
+    },
+    "employment_rate": {
+      "null_rate": 0.0
+    },
+    "broadband_penetration_pct": {
+      "null_rate": 0.0
+    },
+    "rd_expenditure_pct_gdp": {
+      "null_rate": 0.0
+    },
+    "business_rd_pct_gdp": {
+      "null_rate": 0.0
+    },
+    "epo_patents_per_mio_pop": {
+      "null_rate": 0.0
+    },
+    "net_migration_rate": {
+      "null_rate": 0.0
+    },
+    "hi_tech_employment_pct": {
+      "null_rate": 0.0
+    },
+    "gva_ict_share": {
+      "null_rate": 0.0
+    },
+    "population_density": {
+      "null_rate": 0.0
+    },
+    "enterprise_internet_use": {
+      "null_rate": 0.0
+    },
+    "lq_nace_j62j63": {
+      "null_rate": 0.0
+    },
+    "lq_nace_c21_m72": {
+      "null_rate": 0.0
+    },
+    "lq_nace_c26": {
+      "null_rate": 0.0
+    },
+    "lq_nace_d35_clean": {
+      "null_rate": 0.0
+    },
+    "gdp_per_capita_pps_imputed_flag": {
+      "null_rate": 0.0
+    },
+    "population_imputed_flag": {
+      "null_rate": 0.0
+    },
+    "hrst_per_1000_imputed_flag": {
+      "null_rate": 0.0
+    },
+    "tertiary_enrolment_rate_imputed_flag": {
+      "null_rate": 0.0
+    },
+    "employment_rate_imputed_flag": {
+      "null_rate": 0.0
+    },
+    "rd_expenditure_pct_gdp_imputed_flag": {
+      "null_rate": 0.0
+    },
+    "net_migration_rate_imputed_flag": {
+      "null_rate": 0.0
+    },
+    "hi_tech_employment_pct_imputed_flag": {
+      "null_rate": 0.0
+    },
+    "population_density_imputed_flag": {
+      "null_rate": 0.0
+    },
+    "lq_nace_j62j63_imputed_flag": {
+      "null_rate": 0.0
+    },
+    "lq_nace_c21_m72_imputed_flag": {
+      "null_rate": 0.0
+    },
+    "lq_nace_c26_imputed_flag": {
+      "null_rate": 0.0
+    },
+    "lq_nace_d35_clean_imputed_flag": {
+      "null_rate": 0.0
+    },
+    "broadband_penetration_pct_imputed_flag": {
+      "null_rate": 0.0
+    },
+    "business_rd_pct_gdp_imputed_flag": {
+      "null_rate": 0.0
+    },
+    "epo_patents_per_mio_pop_imputed_flag": {
+      "null_rate": 0.0
+    },
+    "gva_ict_share_imputed_flag": {
+      "null_rate": 0.0
+    },
+    "enterprise_internet_use_imputed_flag": {
+      "null_rate": 0.0
+    },
+    "ref_year_cost": {
+      "null_rate": 0.0
+    },
+    "ref_year_talent": {
+      "null_rate": 0.0
+    },
+    "ref_year_infra": {
+      "null_rate": 0.0
+    },
+    "ref_year_cluster": {
+      "null_rate": 0.0
+    },
+    "data_quality_score": {
+      "null_rate": 0.0
+    },
+    "business_rd_pct_gdp_log1p": {
+      "null_rate": 0.0
+    },
+    "epo_patents_per_mio_pop_log1p": {
+      "null_rate": 0.0
+    },
+    "gdp_per_capita_pps_log1p": {
+      "null_rate": 0.0
+    },
+    "gva_ict_share_log1p": {
+      "null_rate": 0.0
+    },
+    "lq_nace_c21_m72_log1p": {
+      "null_rate": 0.0
+    },
+    "lq_nace_c26_log1p": {
+      "null_rate": 0.0
+    },
+    "lq_nace_j62j63_log1p": {
+      "null_rate": 0.0
+    },
+    "rd_expenditure_pct_gdp_log1p": {
+      "null_rate": 0.0
+    },
+    "score_cost": {
+      "null_rate": 0.0
+    },
+    "score_talent": {
+      "null_rate": 0.0
+    },
+    "score_infra": {
+      "null_rate": 0.0
+    },
+    "score_cluster": {
+      "null_rate": 0.0
+    },
+    "score_cost_minmax": {
+      "null_rate": 0.0
+    },
+    "score_talent_minmax": {
+      "null_rate": 0.0
+    },
+    "score_infra_minmax": {
+      "null_rate": 0.0
+    },
+    "score_cluster_minmax": {
+      "null_rate": 0.0
+    },
+    "is_transition_region": {
+      "null_rate": 0.0
+    },
+    "is_insufficient_data": {
+      "null_rate": 0.0
+    },
+    "dimensionality_warning": {
+      "null_rate": 0.0
+    },
+    "archetype_id": {
+      "null_rate": 0.0
+    },
+    "archetype_label": {
+      "null_rate": 0.0
+    },
+    "distance_to_centroid": {
+      "null_rate": 0.0
+    },
+    "silhouette_sample": {
+      "null_rate": 0.0
+    },
+    "electricity_price_eur_kwh": {
+      "null_rate": 0.0537
+    },
+    "renewable_energy_share_pct": {
+      "null_rate": 0.0537
+    },
+    "rail_freight_ktonnes": {
+      "null_rate": 0.0
+    },
+    "port_throughput_ktonnes": {
+      "null_rate": 0.9215
+    },
+    "gerd_gov_pct_gdp": {
+      "null_rate": 0.0537
+    },
+    "gerd_hes_pct_gdp": {
+      "null_rate": 0.0537
+    },
+    "gerd_def_pct_gdp": {
+      "null_rate": 0.0537
+    },
+    "ultrafast_broadband_pct": {
+      "null_rate": 0.3017
+    },
+    "artificial_land_pct": {
+      "null_rate": 0.062
+    },
+    "doing_business_score": {
+      "null_rate": 0.0537
+    },
+    "cit_rate_pct": {
+      "null_rate": 0.0537
+    },
+    "ntc_import_mw": {
+      "null_rate": 0.0537
+    },
+    "water_exploitation_index": {
+      "null_rate": 0.0537
+    },
+    "nuclear_capacity_mw": {
+      "null_rate": 0.0
+    },
+    "eurohpc_proximity_score": {
+      "null_rate": 0.0
+    },
+    "quantum_programme_tier": {
+      "null_rate": 0.0
+    },
+    "nuclear_policy": {
+      "null_rate": 0.0
+    },
+    "haleu_smr_eligible": {
+      "null_rate": 0.0
+    }
+  },
+  "decisions": []
+}

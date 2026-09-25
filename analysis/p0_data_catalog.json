@@ -1,0 +1,168 @@
+{
+  "project": "EU-MegaCampus-Siting",
+  "created": "2026-05-24",
+  "clustering_override": {
+    "k": 4,
+    "reason": "Four archetypes required for 8-type disruptor taxonomy mapping; k=2 conflates structurally distinct profiles on extended feature set.",
+    "base_study_k": 2,
+    "base_study_silhouette": 0.409
+  },
+  "upstream_source": {
+    "label": "EU-Innovation-Panel Gold Layer",
+    "path": "C:\\Users\\andre\\Desktop\\Sandbox\\EU-Innovation-Panel\\data\\gold\\region_profiles_gold.parquet",
+    "features": 66,
+    "regions": 242,
+    "status": "available"
+  },
+  "new_datasets": [
+    {
+      "id": "D01",
+      "label": "Electricity prices — industrial (incl. taxes)",
+      "source": "Eurostat",
+      "code": "nrg_pc_205",
+      "purpose": "SC1/SC2 power cost dimension",
+      "status": "to_download",
+      "local_path": "data/raw/eurostat/nrg_pc_205.csv"
+    },
+    {
+      "id": "D02",
+      "label": "Renewable electricity share by country",
+      "source": "Eurostat",
+      "code": "nrg_ind_ren",
+      "purpose": "SC4 energy transition profile",
+      "status": "to_download",
+      "local_path": "data/raw/eurostat/nrg_ind_ren.csv"
+    },
+    {
+      "id": "D03",
+      "label": "Grid cross-border NTC capacity",
+      "source": "ENTSO-E Transparency Platform",
+      "code": "Cross-Border Physical Flows > NTC",
+      "purpose": "SC1/SC4 grid interconnect capacity",
+      "status": "to_download",
+      "local_path": "data/raw/entso_e/ntc_capacity.csv"
+    },
+    {
+      "id": "D04",
+      "label": "Water Exploitation Index (WEI2)",
+      "source": "EEA",
+      "code": "WEI2 country/basin level",
+      "purpose": "SC1 cooling water availability",
+      "status": "to_download",
+      "local_path": "data/raw/manual/eea_wei2.csv"
+    },
+    {
+      "id": "D05",
+      "label": "Rail freight connectivity",
+      "source": "Eurostat",
+      "code": "tran_r_rapa",
+      "purpose": "SC2 logistics / inland freight access",
+      "status": "to_download",
+      "local_path": "data/raw/eurostat/tran_r_rapa.csv"
+    },
+    {
+      "id": "D06",
+      "label": "Port throughput (nearest-port proxy)",
+      "source": "Eurostat",
+      "code": "mar_go_aa",
+      "purpose": "SC2 maritime logistics",
+      "status": "to_download",
+      "local_path": "data/raw/eurostat/mar_go_aa.csv"
+    },
+    {
+      "id": "D07",
+      "label": "GERD by sector (incl. DEF)",
+      "source": "Eurostat",
+      "code": "rd_e_gerdsc",
+      "purpose": "SC3 academic R&D / SC5 defence R&D",
+      "status": "to_download",
+      "local_path": "data/raw/eurostat/rd_e_gerdsc.csv"
+    },
+    {
+      "id": "D08",
+      "label": "EU Structural Funds absorption rate",
+      "source": "EC Open Data / Cohesion Data",
+      "code": "esif_2014-2020_categorisation_ERDF-ESF-CF_planned_vs_achieved",
+      "purpose": "SC4 transition readiness / EU investment signal",
+      "status": "to_download",
+      "local_path": "data/raw/manual/esif_absorption.csv"
+    },
+    {
+      "id": "D09",
+      "label": "Ease of doing business index",
+      "source": "World Bank",
+      "code": "Doing Business 2020 (DB2020)",
+      "purpose": "All site classes — regulatory environment",
+      "status": "to_download",
+      "local_path": "data/raw/world_bank/doing_business_2020.csv"
+    },
+    {
+      "id": "D10",
+      "label": "Corporate tax rate (headline + OECD effective)",
+      "source": "OECD Tax Database",
+      "code": "Table II.1",
+      "purpose": "All site classes — fiscal environment",
+      "status": "to_download",
+      "local_path": "data/raw/oecd/corporate_tax_rates.csv"
+    },
+    {
+      "id": "D11",
+      "label": "Broadband ultra-fast coverage (>100 Mbps)",
+      "source": "Eurostat",
+      "code": "isoc_r_broad_h",
+      "purpose": "SC1/SC3 digital infrastructure depth",
+      "status": "to_download",
+      "local_path": "data/raw/eurostat/isoc_r_broad_h.csv"
+    },
+    {
+      "id": "D12",
+      "label": "Corine Land Cover 2018 (industrial land proxy)",
+      "source": "Copernicus / EEA",
+      "code": "CLC2018",
+      "purpose": "SC2 industrial land availability",
+      "status": "to_download",
+      "local_path": "data/raw/manual/clc2018_nuts2_agg.csv"
+    }
+  ],
+  "disruptor_types": [
+    {
+      "id": "T1",
+      "label": "AI / Machine Learning Hub"
+    },
+    {
+      "id": "T2",
+      "label": "Biotechnology / Life Sciences"
+    },
+    {
+      "id": "T3",
+      "label": "Semiconductors / Advanced Electronics"
+    },
+    {
+      "id": "T4",
+      "label": "Cleantech / Green Technology"
+    },
+    {
+      "id": "T5",
+      "label": "Hyperscale Data Centre Hub"
+    },
+    {
+      "id": "T6",
+      "label": "HALEU / Advanced Nuclear Industrial Base"
+    },
+    {
+      "id": "T7",
+      "label": "Deep-Tech Robotics Campus"
+    },
+    {
+      "id": "T8",
+      "label": "Quantum / Photonics Research Anchor"
+    }
+  ],
+  "data_gap_proxies": {
+    "quantum_patents_nuts2": "DATA_GAP — proxy: total EPO patent density + EuroHPC proximity + national quantum programme flag",
+    "robotics_patents_nuts2": "DATA_GAP — proxy: machinery/automotive LQ + BERD + CORDIS EIC funding",
+    "haleu_patents_nuts2": "DATA_GAP — proxy: nuclear capacity proximity + chemical LQ (C20) + regulatory flag",
+    "grid_headroom_nuts2": "DATA_GAP — proxy: ENTSO-E NTC country capacity + electricity price (inverse)",
+    "industrial_land_cost_nuts2": "DATA_GAP — proxy: inverse GDP/cap PPS + urban/rural typology"
+  }
+}

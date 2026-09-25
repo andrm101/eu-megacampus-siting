@@ -1,0 +1,90 @@
+source_id,variable_name,feature_group,source_name,nuts_level,reference_year,access_method,license,null_rate_estimate,update_frequency,is_data_gap,gap_severity,types_served,status
+upstream_gold,nuts2_name,upstream,EU-Innovation-Panel Gold Layer,2,2019-2022,parquet_upstream,Eurostat / OECD — see EU-Innovation-Panel data catalog,0.0,annual,False,,,available
+upstream_gold,country_code,upstream,EU-Innovation-Panel Gold Layer,2,2019-2022,parquet_upstream,Eurostat / OECD — see EU-Innovation-Panel data catalog,0.0,annual,False,,,available
+upstream_gold,gdp_per_capita_pps,upstream,EU-Innovation-Panel Gold Layer,2,2019-2022,parquet_upstream,Eurostat / OECD — see EU-Innovation-Panel data catalog,0.0,annual,False,,"T1,T2,T3,T4,T5,T6,T7,T8",available
+upstream_gold,population,upstream,EU-Innovation-Panel Gold Layer,2,2019-2022,parquet_upstream,Eurostat / OECD — see EU-Innovation-Panel data catalog,0.0,annual,False,,,available
+upstream_gold,hrst_per_1000,upstream,EU-Innovation-Panel Gold Layer,2,2019-2022,parquet_upstream,Eurostat / OECD — see EU-Innovation-Panel data catalog,0.0,annual,False,,"T1,T2,T3,T7,T8",available
+upstream_gold,tertiary_enrolment_rate,upstream,EU-Innovation-Panel Gold Layer,2,2019-2022,parquet_upstream,Eurostat / OECD — see EU-Innovation-Panel data catalog,0.0,annual,False,,"T1,T2,T7,T8",available
+upstream_gold,employment_rate,upstream,EU-Innovation-Panel Gold Layer,2,2019-2022,parquet_upstream,Eurostat / OECD — see EU-Innovation-Panel data catalog,0.0,annual,False,,"T1,T2,T3,T4,T5,T6,T7,T8",available
+upstream_gold,broadband_penetration_pct,upstream,EU-Innovation-Panel Gold Layer,2,2019-2022,parquet_upstream,Eurostat / OECD — see EU-Innovation-Panel data catalog,0.0,annual,False,,"T1,T5,T8",available
+upstream_gold,rd_expenditure_pct_gdp,upstream,EU-Innovation-Panel Gold Layer,2,2019-2022,parquet_upstream,Eurostat / OECD — see EU-Innovation-Panel data catalog,0.0,annual,False,,"T1,T2,T3,T4,T6,T7,T8",available
+upstream_gold,business_rd_pct_gdp,upstream,EU-Innovation-Panel Gold Layer,2,2019-2022,parquet_upstream,Eurostat / OECD — see EU-Innovation-Panel data catalog,0.0,annual,False,,"T1,T2,T3,T4,T6,T7,T8",available
+upstream_gold,epo_patents_per_mio_pop,upstream,EU-Innovation-Panel Gold Layer,2,2019-2022,parquet_upstream,Eurostat / OECD — see EU-Innovation-Panel data catalog,0.0,annual,False,,"T1,T2,T3,T4,T7,T8",available
+upstream_gold,net_migration_rate,upstream,EU-Innovation-Panel Gold Layer,2,2019-2022,parquet_upstream,Eurostat / OECD — see EU-Innovation-Panel data catalog,0.0,annual,False,,,available
+upstream_gold,hi_tech_employment_pct,upstream,EU-Innovation-Panel Gold Layer,2,2019-2022,parquet_upstream,Eurostat / OECD — see EU-Innovation-Panel data catalog,0.0,annual,False,,"T1,T2,T3,T7,T8",available
+upstream_gold,gva_ict_share,upstream,EU-Innovation-Panel Gold Layer,2,2019-2022,parquet_upstream,Eurostat / OECD — see EU-Innovation-Panel data catalog,0.0,annual,False,,"T1,T5",available
+upstream_gold,population_density,upstream,EU-Innovation-Panel Gold Layer,2,2019-2022,parquet_upstream,Eurostat / OECD — see EU-Innovation-Panel data catalog,0.0,annual,False,,"T3,T5,T6",available
+upstream_gold,enterprise_internet_use,upstream,EU-Innovation-Panel Gold Layer,2,2019-2022,parquet_upstream,Eurostat / OECD — see EU-Innovation-Panel data catalog,0.0,annual,False,,"T1,T5",available
+upstream_gold,lq_nace_j62j63,upstream,EU-Innovation-Panel Gold Layer,2,2019-2022,parquet_upstream,Eurostat / OECD — see EU-Innovation-Panel data catalog,0.0,annual,False,,"T1,T5",available
+upstream_gold,lq_nace_c21_m72,upstream,EU-Innovation-Panel Gold Layer,2,2019-2022,parquet_upstream,Eurostat / OECD — see EU-Innovation-Panel data catalog,0.0,annual,False,,T2,available
+upstream_gold,lq_nace_c26,upstream,EU-Innovation-Panel Gold Layer,2,2019-2022,parquet_upstream,Eurostat / OECD — see EU-Innovation-Panel data catalog,0.0,annual,False,,"T3,T7",available
+upstream_gold,lq_nace_d35_clean,upstream,EU-Innovation-Panel Gold Layer,2,2019-2022,parquet_upstream,Eurostat / OECD — see EU-Innovation-Panel data catalog,0.0,annual,False,,"T4,T5,T6",available
+upstream_gold,gdp_per_capita_pps_imputed_flag,upstream,EU-Innovation-Panel Gold Layer,2,2019-2022,parquet_upstream,Eurostat / OECD — see EU-Innovation-Panel data catalog,0.0,annual,False,,,available
+upstream_gold,population_imputed_flag,upstream,EU-Innovation-Panel Gold Layer,2,2019-2022,parquet_upstream,Eurostat / OECD — see EU-Innovation-Panel data catalog,0.0,annual,False,,,available
+upstream_gold,hrst_per_1000_imputed_flag,upstream,EU-Innovation-Panel Gold Layer,2,2019-2022,parquet_upstream,Eurostat / OECD — see EU-Innovation-Panel data catalog,0.0,annual,False,,,available
+upstream_gold,tertiary_enrolment_rate_imputed_flag,upstream,EU-Innovation-Panel Gold Layer,2,2019-2022,parquet_upstream,Eurostat / OECD — see EU-Innovation-Panel data catalog,0.0,annual,False,,,available
+upstream_gold,employment_rate_imputed_flag,upstream,EU-Innovation-Panel Gold Layer,2,2019-2022,parquet_upstream,Eurostat / OECD — see EU-Innovation-Panel data catalog,0.0,annual,False,,,available
+upstream_gold,rd_expenditure_pct_gdp_imputed_flag,upstream,EU-Innovation-Panel Gold Layer,2,2019-2022,parquet_upstream,Eurostat / OECD — see EU-Innovation-Panel data catalog,0.0,annual,False,,,available
+upstream_gold,net_migration_rate_imputed_flag,upstream,EU-Innovation-Panel Gold Layer,2,2019-2022,parquet_upstream,Eurostat / OECD — see EU-Innovation-Panel data catalog,0.0,annual,False,,,available
+upstream_gold,hi_tech_employment_pct_imputed_flag,upstream,EU-Innovation-Panel Gold Layer,2,2019-2022,parquet_upstream,Eurostat / OECD — see EU-Innovation-Panel data catalog,0.0,annual,False,,,available
+upstream_gold,population_density_imputed_flag,upstream,EU-Innovation-Panel Gold Layer,2,2019-2022,parquet_upstream,Eurostat / OECD — see EU-Innovation-Panel data catalog,0.0,annual,False,,,available
+upstream_gold,lq_nace_j62j63_imputed_flag,upstream,EU-Innovation-Panel Gold Layer,2,2019-2022,parquet_upstream,Eurostat / OECD — see EU-Innovation-Panel data catalog,0.0,annual,False,,,available
+upstream_gold,lq_nace_c21_m72_imputed_flag,upstream,EU-Innovation-Panel Gold Layer,2,2019-2022,parquet_upstream,Eurostat / OECD — see EU-Innovation-Panel data catalog,0.0,annual,False,,,available
+upstream_gold,lq_nace_c26_imputed_flag,upstream,EU-Innovation-Panel Gold Layer,2,2019-2022,parquet_upstream,Eurostat / OECD — see EU-Innovation-Panel data catalog,0.0,annual,False,,,available
+upstream_gold,lq_nace_d35_clean_imputed_flag,upstream,EU-Innovation-Panel Gold Layer,2,2019-2022,parquet_upstream,Eurostat / OECD — see EU-Innovation-Panel data catalog,0.0,annual,False,,,available
+upstream_gold,broadband_penetration_pct_imputed_flag,upstream,EU-Innovation-Panel Gold Layer,2,2019-2022,parquet_upstream,Eurostat / OECD — see EU-Innovation-Panel data catalog,0.0,annual,False,,,available
+upstream_gold,business_rd_pct_gdp_imputed_flag,upstream,EU-Innovation-Panel Gold Layer,2,2019-2022,parquet_upstream,Eurostat / OECD — see EU-Innovation-Panel data catalog,0.0,annual,False,,,available
+upstream_gold,epo_patents_per_mio_pop_imputed_flag,upstream,EU-Innovation-Panel Gold Layer,2,2019-2022,parquet_upstream,Eurostat / OECD — see EU-Innovation-Panel data catalog,0.0,annual,False,,,available
+upstream_gold,gva_ict_share_imputed_flag,upstream,EU-Innovation-Panel Gold Layer,2,2019-2022,parquet_upstream,Eurostat / OECD — see EU-Innovation-Panel data catalog,0.0,annual,False,,,available
+upstream_gold,enterprise_internet_use_imputed_flag,upstream,EU-Innovation-Panel Gold Layer,2,2019-2022,parquet_upstream,Eurostat / OECD — see EU-Innovation-Panel data catalog,0.0,annual,False,,,available
+upstream_gold,ref_year_cost,upstream,EU-Innovation-Panel Gold Layer,2,2019-2022,parquet_upstream,Eurostat / OECD — see EU-Innovation-Panel data catalog,0.0,annual,False,,,available
+upstream_gold,ref_year_talent,upstream,EU-Innovation-Panel Gold Layer,2,2019-2022,parquet_upstream,Eurostat / OECD — see EU-Innovation-Panel data catalog,0.0,annual,False,,,available
+upstream_gold,ref_year_infra,upstream,EU-Innovation-Panel Gold Layer,2,2019-2022,parquet_upstream,Eurostat / OECD — see EU-Innovation-Panel data catalog,0.0,annual,False,,,available
+upstream_gold,ref_year_cluster,upstream,EU-Innovation-Panel Gold Layer,2,2019-2022,parquet_upstream,Eurostat / OECD — see EU-Innovation-Panel data catalog,0.0,annual,False,,,available
+upstream_gold,data_quality_score,upstream,EU-Innovation-Panel Gold Layer,2,2019-2022,parquet_upstream,Eurostat / OECD — see EU-Innovation-Panel data catalog,0.0,annual,False,,,available
+upstream_gold,business_rd_pct_gdp_log1p,upstream,EU-Innovation-Panel Gold Layer,2,2019-2022,parquet_upstream,Eurostat / OECD — see EU-Innovation-Panel data catalog,0.0,annual,False,,,available
+upstream_gold,epo_patents_per_mio_pop_log1p,upstream,EU-Innovation-Panel Gold Layer,2,2019-2022,parquet_upstream,Eurostat / OECD — see EU-Innovation-Panel data catalog,0.0,annual,False,,,available
+upstream_gold,gdp_per_capita_pps_log1p,upstream,EU-Innovation-Panel Gold Layer,2,2019-2022,parquet_upstream,Eurostat / OECD — see EU-Innovation-Panel data catalog,0.0,annual,False,,,available
+upstream_gold,gva_ict_share_log1p,upstream,EU-Innovation-Panel Gold Layer,2,2019-2022,parquet_upstream,Eurostat / OECD — see EU-Innovation-Panel data catalog,0.0,annual,False,,,available
+upstream_gold,lq_nace_c21_m72_log1p,upstream,EU-Innovation-Panel Gold Layer,2,2019-2022,parquet_upstream,Eurostat / OECD — see EU-Innovation-Panel data catalog,0.0,annual,False,,,available
+upstream_gold,lq_nace_c26_log1p,upstream,EU-Innovation-Panel Gold Layer,2,2019-2022,parquet_upstream,Eurostat / OECD — see EU-Innovation-Panel data catalog,0.0,annual,False,,,available
+upstream_gold,lq_nace_j62j63_log1p,upstream,EU-Innovation-Panel Gold Layer,2,2019-2022,parquet_upstream,Eurostat / OECD — see EU-Innovation-Panel data catalog,0.0,annual,False,,,available
+upstream_gold,rd_expenditure_pct_gdp_log1p,upstream,EU-Innovation-Panel Gold Layer,2,2019-2022,parquet_upstream,Eurostat / OECD — see EU-Innovation-Panel data catalog,0.0,annual,False,,,available
+upstream_gold,score_cost,upstream,EU-Innovation-Panel Gold Layer,2,2019-2022,parquet_upstream,Eurostat / OECD — see EU-Innovation-Panel data catalog,0.0,annual,False,,,available
+upstream_gold,score_talent,upstream,EU-Innovation-Panel Gold Layer,2,2019-2022,parquet_upstream,Eurostat / OECD — see EU-Innovation-Panel data catalog,0.0,annual,False,,"T1,T2,T3,T7,T8",available
+upstream_gold,score_infra,upstream,EU-Innovation-Panel Gold Layer,2,2019-2022,parquet_upstream,Eurostat / OECD — see EU-Innovation-Panel data catalog,0.0,annual,False,,,available
+upstream_gold,score_cluster,upstream,EU-Innovation-Panel Gold Layer,2,2019-2022,parquet_upstream,Eurostat / OECD — see EU-Innovation-Panel data catalog,0.0,annual,False,,,available
+upstream_gold,score_cost_minmax,upstream,EU-Innovation-Panel Gold Layer,2,2019-2022,parquet_upstream,Eurostat / OECD — see EU-Innovation-Panel data catalog,0.0,annual,False,,,available
+upstream_gold,score_talent_minmax,upstream,EU-Innovation-Panel Gold Layer,2,2019-2022,parquet_upstream,Eurostat / OECD — see EU-Innovation-Panel data catalog,0.0,annual,False,,,available
+upstream_gold,score_infra_minmax,upstream,EU-Innovation-Panel Gold Layer,2,2019-2022,parquet_upstream,Eurostat / OECD — see EU-Innovation-Panel data catalog,0.0,annual,False,,,available
+upstream_gold,score_cluster_minmax,upstream,EU-Innovation-Panel Gold Layer,2,2019-2022,parquet_upstream,Eurostat / OECD — see EU-Innovation-Panel data catalog,0.0,annual,False,,,available
+upstream_gold,is_transition_region,upstream,EU-Innovation-Panel Gold Layer,2,2019-2022,parquet_upstream,Eurostat / OECD — see EU-Innovation-Panel data catalog,0.0,annual,False,,T4,available
+upstream_gold,is_insufficient_data,upstream,EU-Innovation-Panel Gold Layer,2,2019-2022,parquet_upstream,Eurostat / OECD — see EU-Innovation-Panel data catalog,0.0,annual,False,,,available
+upstream_gold,dimensionality_warning,upstream,EU-Innovation-Panel Gold Layer,2,2019-2022,parquet_upstream,Eurostat / OECD — see EU-Innovation-Panel data catalog,0.0,annual,False,,,available
+upstream_gold,archetype_id,upstream,EU-Innovation-Panel Gold Layer,2,2019-2022,parquet_upstream,Eurostat / OECD — see EU-Innovation-Panel data catalog,0.0,annual,False,,,available
+upstream_gold,archetype_label,upstream,EU-Innovation-Panel Gold Layer,2,2019-2022,parquet_upstream,Eurostat / OECD — see EU-Innovation-Panel data catalog,0.0,annual,False,,,available
+upstream_gold,distance_to_centroid,upstream,EU-Innovation-Panel Gold Layer,2,2019-2022,parquet_upstream,Eurostat / OECD — see EU-Innovation-Panel data catalog,0.0,annual,False,,,available
+upstream_gold,silhouette_sample,upstream,EU-Innovation-Panel Gold Layer,2,2019-2022,parquet_upstream,Eurostat / OECD — see EU-Innovation-Panel data catalog,0.0,annual,False,,,available
+D01,nrg_pc_205,energy,"Electricity prices — industrial (incl. taxes), bi-annual",country/point,2022,bulk_sdmx_csv,Eurostat — free reuse with attribution,0.05,annual,False,,"T3,T4,T5,T6",to_download
+D02,nrg_ind_ren,energy,Renewable electricity share by country,country/point,2022,bulk_sdmx_csv,Eurostat — free reuse with attribution,0.05,annual,False,,"T4,T5,T6",to_download
+D03,Physical_Flows_NTC,energy,ENTSO-E Cross-Border NTC capacity by interconnection,country/point,2022,manual_bulk_csv,"ENTSO-E — open data, CC BY 4.0",0.1,annual,False,,"T5,T6",to_download
+D04,WEI2,water,Water Exploitation Index (WEI2) by river basin,country/point,2019,manual_download,"EEA — open data, CC BY 4.0",0.2,annual,False,,T5,to_download
+D05,tran_r_rapa,transport,Rail freight transport by NUTS2 region,2,2021,bulk_sdmx_csv,Eurostat — free reuse with attribution,0.25,annual,False,,"T3,T7",to_download
+D06,mar_go_aa,transport,Sea port goods throughput by port,country/point,2022,bulk_sdmx_csv,Eurostat — free reuse with attribution,0.3,annual,False,,T3,to_download
+D07,rd_e_gerdsc,rd,GERD by sector of performance (incl. DEF),country/point,2021,bulk_sdmx_csv,Eurostat — free reuse with attribution,0.15,annual,False,,"T2,T6,T7,T8",to_download
+D08,ESIF_2014_2020,policy,ESIF 2014-2020 structural funds absorption rate by NUTS2,2,2022,manual_bulk_csv,"EC — open data, CC BY 4.0",0.15,annual,False,,T4,to_download
+D09,DB2020,regulatory,Ease of Doing Business index by country (DB2020),country/point,2020,bulk_csv,"World Bank — open data, CC BY 4.0",0.05,annual,False,,"T1,T2,T3,T4,T5,T6,T7,T8",to_download
+D10,Table_II_1,fiscal,Corporate income tax rate (headline + OECD effective),country/point,2022,bulk_csv,OECD — free reuse with attribution,0.05,annual,False,,"T1,T2,T3,T5",to_download
+D11,isoc_r_broad_h,digital,Broadband ultra-fast coverage (>100 Mbps) by NUTS2,2,2022,bulk_sdmx_csv,Eurostat — free reuse with attribution,0.1,annual,False,,"T1,T5,T8",to_download
+D12,CLC2018,land,Industrial land share (Corine Land Cover 2018 aggregated to NUTS2),2,2018,manual_spatial_join,"Copernicus — free reuse, CC BY 4.0",0.1,annual,False,,"T3,T5,T6",to_download
+D13,PRIS_reactors,nuclear,Nuclear power plant locations and capacity (IAEA PRIS),country/point,2024,manual_download,"IAEA — public access, non-commercial",0.0,annual,False,,T6,to_download
+D14,EuroHPC_sites,compute,EuroHPC Joint Undertaking supercomputing sites,country/point,2024,manual_list,EuroHPC JU — public information,0.0,annual,False,,T8,manual_compile
+D15,quantum_flag,quantum,National quantum technology programme flag,country/point,2024,manual_binary_flag,Public domain — compiled from official programme websites,0.0,annual,False,,T8,manual_compile
+D16,nuclear_policy_flag,nuclear,Nuclear energy regulatory policy by country,country/point,2024,manual_categorical,Public domain — compiled from official government sources,0.0,annual,False,,T6,manual_compile
+GAP_quantum_patents_nuts2_ipc,quantum_patents_nuts2_ipc,data_gap,DATA GAP — proxy: EPO total patent density (epo_patents_per_mio_pop) + EuroHPC...,2,N/A,proxy,N/A,,unknown,True,3.0,T8,data_gap
+GAP_robotics_patents_nuts2_ipc,robotics_patents_nuts2_ipc,data_gap,DATA GAP — proxy: machinery/automotive LQ (lq_nace_c26 partial) + BERD + CORDI...,2,N/A,proxy,N/A,,unknown,True,2.0,T7,data_gap
+GAP_haleu_patents_nuts2_ipc,haleu_patents_nuts2_ipc,data_gap,DATA GAP — proxy: nuclear_capacity_proximity + chemical_lq (C20) + nuclear_pol...,2,N/A,proxy,N/A,,unknown,True,2.0,T6,data_gap
+GAP_grid_headroom_nuts2_mw,grid_headroom_nuts2_mw,data_gap,DATA GAP — proxy: ENTSO-E country NTC import surplus (inverse of net import ba...,2,N/A,proxy,N/A,,unknown,True,3.0,T5,data_gap
+GAP_industrial_land_cost_nuts2,industrial_land_cost_nuts2,data_gap,DATA GAP — proxy: inverse(GDP per capita PPS) + CLC2018 industrial land share ...,2,N/A,proxy,N/A,,unknown,True,2.0,"T3, T5, T6",data_gap
+GAP_vc_dealflow_nuts2,vc_dealflow_nuts2,data_gap,DATA GAP — proxy: CORDIS EIC funding per NUTS2 (if CORDIS available) or busine...,2,N/A,proxy,N/A,,unknown,True,2.0,"T1, T2, T7",data_gap
+GAP_cordis_horizon_eu_nuts2,cordis_horizon_eu_nuts2,data_gap,DATA GAP — proxy: CORDIS is publicly available at data.europa.eu/data/datasets...,2,N/A,proxy,N/A,,unknown,True,1.0,"T1, T2, T7, T8",data_gap
