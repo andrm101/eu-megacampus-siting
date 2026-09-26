@@ -1,0 +1,82 @@
+{
+  "row_count": {
+    "status": "PASS",
+    "n_rows": 242,
+    "n_unique": 242,
+    "expected": 242
+  },
+  "columns_present": {
+    "status": "PASS",
+    "missing": []
+  },
+  "gold_unchanged": {
+    "status": "PASS",
+    "pre_existing_columns_hash_before": "56cb1b80602000c1205ea2d56f615491cb7b5666549ebb394c124714ece8171f",
+    "pre_existing_columns_hash_after": "56cb1b80602000c1205ea2d56f615491cb7b5666549ebb394c124714ece8171f",
+    "unchanged": true
+  },
+  "data_gap_register": {
+    "status": "PASS",
+    "gaps": {
+      "smart_spec_strategy_flag": {
+        "status": "DATA_GAP",
+        "reason": "source 's3_strategies' unavailable this session (fetch_results=False)",
+        "n_null": 242
+      },
+      "cluster_org_count": {
+        "status": "DATA_GAP",
+        "reason": "source 'cluster_registry' unavailable this session (fetch_results=False)",
+        "n_null": 242
+      },
+      "institutional_diversity_score": {
+        "status": "OK",
+        "reason": "fully resolved",
+        "n_null": 0
+      },
+      "rda_capacity_index": {
+        "status": "DATA_GAP",
+        "reason": "source 'esif_programmes' unavailable this session (fetch_results=False)",
+        "n_null": 242
+      },
+      "regional_fiscal_autonomy_pct": {
+        "status": "DATA_GAP",
+        "reason": "source 'oecd_fiscal_autonomy' unavailable this session (fetch_results=False)",
+        "n_null": 242
+      }
+    }
+  },
+  "p4_rerun_unchanged": {
+    "status": "PASS",
+    "baseline": {
+      "T1": 49,
+      "T2": 46,
+      "T3": 75,
+      "T4": 77,
+      "T5": 21,
+      "T6": 38,
+      "T7": 31,
+      "T8": 106
+    },
+    "observed": {
+      "T1": 49,
+      "T2": 46,
+      "T3": 75,
+      "T4": 77,
+      "T5": 21,
+      "T6": 38,
+      "T7": 31,
+      "T8": 106
+    },
+    "matches": {
+      "T1": true,
+      "T2": true,
+      "T3": true,
+      "T4": true,
+      "T5": true,
+      "T6": true,
+      "T7": true,
+      "T8": true
+    }
+  },
+  "overall_status": "PASS"
+}
