@@ -96,6 +96,31 @@ def test_append_to_gold_preserves_pre_existing_columns(tmp_path, monkeypatch):
     assert reloaded.loc["DE30", "rda_capacity_index"] == 5
 
 
+def test_append_to_gold_raises_on_column_collision(tmp_path, monkeypatch):
+    gold_df = gov.pd.DataFrame(
+        {"country_code": ["FR", "DE"], "rda_capacity_index": [10, 20]},
+        index=gov.pd.Index(["FR10", "DE30"], name="nuts2_code"),
+    )
+    gold_path = tmp_path / "gold.parquet"
+    gov_gold_path = tmp_path / "governance.parquet"
+    gold_df.to_parquet(gold_path)
+    monkeypatch.setattr(gov, "GOLD_PATH", gold_path)
+    monkeypatch.setattr(gov, "GOVERNANCE_GOLD_PATH", gov_gold_path)
+
+    governance_df = gov.pd.DataFrame(
+        {"rda_capacity_index": [3, 5]},
+        index=gov.pd.Index(["FR10", "DE30"], name="nuts2_code"),
+    )
+    try:
+        gov.append_to_gold(governance_df)
+        assert False, "expected ValueError on column collision"
+    except ValueError as e:
+        assert "rda_capacity_index" in str(e)
+
+    reloaded = gov.pd.read_parquet(gold_path)
+    assert reloaded.loc["FR10", "rda_capacity_index"] == 10
+
+
 def test_run_gate_p11b_fails_on_wrong_row_count():
     governance_df = gov.pd.DataFrame(
         {"rda_capacity_index": [1]},

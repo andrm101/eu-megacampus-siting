@@ -306,7 +306,14 @@ def harmonise_governance(gold_keys: pd.DataFrame, fetch_results: dict[str, bool]
 
 def append_to_gold(governance_df: pd.DataFrame) -> dict:
     gold = pd.read_parquet(GOLD_PATH)
-    pre_existing_cols = [c for c in gold.columns if c not in governance_df.columns]
+    collisions = set(governance_df.columns) & set(gold.columns)
+    if collisions:
+        raise ValueError(
+            f"Governance column(s) {sorted(collisions)} already exist in Gold -- "
+            "refusing to overwrite pre-existing data. Rename the governance "
+            "column(s) or investigate why Gold already has them."
+        )
+    pre_existing_cols = list(gold.columns)
     hash_before = _hash_columns(gold, pre_existing_cols)
 
     merged = gold.copy()
@@ -335,7 +342,6 @@ def run_p4_rerun_check() -> dict:
     """Re-run p4_suitability_scores.py and confirm T1-T8 counts match the
     pre-P11b baseline recorded in CLAUDE.md -- the concrete proof this
     extension changed nothing about scoring, not just an inspection claim."""
-    import re
     import subprocess
 
     baseline = {"T1": 49, "T2": 46, "T3": 75, "T4": 77, "T5": 21, "T6": 38, "T7": 31, "T8": 106}
@@ -343,12 +349,20 @@ def run_p4_rerun_check() -> dict:
         [sys.executable, str(ROOT / "scripts" / "p4_suitability_scores.py")],
         capture_output=True, text=True, cwd=str(ROOT),
     )
-    counts = {}
-    for line in result.stdout.splitlines():
-        m = re.search(r"\b(T[1-8])\D+(\d+)\s*$", line)
-        if m:
-            counts[m.group(1)] = int(m.group(2))
-    matches = {t: counts.get(t) == baseline[t] for t in baseline}
+    if result.returncode != 0:
+        return {
+            "status": "FAIL",
+            "baseline": baseline,
+            "observed": {},
+            "matches": {t: False for t in baseline},
+            "error": f"p4_suitability_scores.py exited {result.returncode}: {result.stderr[-2000:]}",
+        }
+
+    shortlist_path = ROOT / "analysis" / "p4_shortlist.csv"
+    shortlist = pd.read_csv(shortlist_path)
+    counts = shortlist["type_id"].value_counts().to_dict()
+    counts = {t: int(counts.get(t, 0)) for t in baseline}
+    matches = {t: counts[t] == baseline[t] for t in baseline}
     return {
         "status": "PASS" if all(matches.values()) else "FAIL",
         "baseline": baseline,
