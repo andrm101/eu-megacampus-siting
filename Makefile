@@ -59,7 +59,7 @@ governance:
 	$(PYTHON) scripts/p11b_governance.py
 
 # ─── Full pipeline ─────────────────────────────────────────────
-pipeline: scaffold inventory ingest eda scores shortlist spatial feasibility report
+pipeline: scaffold inventory ingest eda scores shortlist spatial feasibility report governance
 
 # ─── Reproducibility ───────────────────────────────────────────
 reproduce:

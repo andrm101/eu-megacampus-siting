@@ -29,8 +29,8 @@
         "n_null": 242
       },
       "institutional_diversity_score": {
-        "status": "OK",
-        "reason": "fully resolved",
+        "status": "COUNTRY_BROADCAST",
+        "reason": "NUTS2 coverage in Eurostat educ_uoe_enrt01 was too sparse (<20 regions) to trust -- degraded to a country-level mean broadcast across all NUTS2 regions of that country. This is a country-level proxy, NOT a value resolved at NUTS2, and the source itself (tertiary enrolment headcounts) is an approximation of institutional diversity, not a direct institution count.",
         "n_null": 0
       },
       "rda_capacity_index": {
@@ -43,39 +43,6 @@
         "reason": "source 'oecd_fiscal_autonomy' unavailable this session (fetch_results=False)",
         "n_null": 242
       }
-    }
-  },
-  "p4_rerun_unchanged": {
-    "status": "PASS",
-    "baseline": {
-      "T1": 49,
-      "T2": 46,
-      "T3": 75,
-      "T4": 77,
-      "T5": 21,
-      "T6": 38,
-      "T7": 31,
-      "T8": 106
-    },
-    "observed": {
-      "T1": 49,
-      "T2": 46,
-      "T3": 75,
-      "T4": 77,
-      "T5": 21,
-      "T6": 38,
-      "T7": 31,
-      "T8": 106
-    },
-    "matches": {
-      "T1": true,
-      "T2": true,
-      "T3": true,
-      "T4": true,
-      "T5": true,
-      "T6": true,
-      "T7": true,
-      "T8": true
     }
   },
   "overall_status": "PASS"

@@ -35,6 +35,17 @@ from src.utils.logging_config import pipeline_step  # noqa: E402
 RAW = ROOT / "data" / "raw"
 GOLD_PATH = ROOT / "data" / "gold" / "megacampus_gold.parquet"
 GOVERNANCE_GOLD_PATH = ROOT / "data" / "gold" / "megacampus_governance.parquet"
+# The fixed set of columns this script itself produces. Used to distinguish
+# "this script's own previous output" (safe to overwrite -- idempotent
+# re-run) from a genuinely unrelated pre-existing Gold column (a real
+# collision that should still block the run).
+GOVERNANCE_COLUMNS = {
+    "smart_spec_strategy_flag", "smart_spec_strategy_flag_imputed_flag",
+    "cluster_org_count", "cluster_org_count_imputed_flag",
+    "institutional_diversity_score", "institutional_diversity_score_imputed_flag",
+    "rda_capacity_index", "rda_capacity_index_imputed_flag",
+    "regional_fiscal_autonomy_pct", "regional_fiscal_autonomy_is_country_broadcast",
+}
 ANALYSIS = ROOT / "analysis"
 TIMEOUT = 60
 RETRY_WAIT = 5
@@ -224,25 +235,51 @@ def _parse_cluster_registry(gold_keys: pd.DataFrame) -> pd.Series | None:
     return counts.reindex(gold_keys.index)
 
 
-def _parse_educ_institutions(gold_keys: pd.DataFrame) -> pd.Series | None:
+def _parse_educ_institutions(gold_keys: pd.DataFrame) -> tuple[pd.Series | None, bool]:
+    """Returns (series, is_country_broadcast).
+
+    is_country_broadcast is True when NUTS2 coverage was too sparse to trust
+    and the function degraded to a country-level value broadcast across all
+    NUTS2 regions of that country -- callers MUST NOT treat that as a
+    resolved-at-NUTS2 value just because it is non-null.
+    """
     path = RAW / "eurostat" / "educ_uoe_enrt01.csv"
     if not path.exists():
-        return None
+        return None, False
     df = pd.read_csv(path)
     df.columns = [c.lower().strip() for c in df.columns]
     geo_col = next((c for c in df.columns if c == "geo"), None)
     val_col = "obs_value" if "obs_value" in df.columns else None
     if geo_col is None or val_col is None:
-        return None
+        return None, False
     df[val_col] = pd.to_numeric(df[val_col], errors="coerce")
+
+    # Filter to a single consistent cell before aggregating -- the raw pull
+    # mixes sex, sector, and ISCED-level dimensions, so summing/averaging
+    # across them would double-count the same students many times over.
+    # sex: "T" = total (both sexes combined).
+    if "sex" in df.columns:
+        df = df[df["sex"] == "T"]
+    # sector: prefer the total-across-sectors code actually present in this
+    # pull ("TOT_SEC"); fall back to no filter if it is ever absent.
+    if "sector" in df.columns and "TOT_SEC" in set(df["sector"]):
+        df = df[df["sector"] == "TOT_SEC"]
+    # isced11: prefer the tertiary-aggregate code ("ED5-8" = all tertiary
+    # education, ISCED levels 5-8) which IS present in this pull; if it were
+    # ever absent, the raw filtered mean across levels would be used as an
+    # honest (coarser) approximation instead of inventing an aggregate.
+    isced_col = next((c for c in df.columns if c in ("isced11", "isced")), None)
+    if isced_col is not None and "ED5-8" in set(df[isced_col]):
+        df = df[df[isced_col] == "ED5-8"]
+
     df["geo4"] = df[geo_col].astype(str).str.upper().str[:4]
     nuts2_rows = df[df["geo4"].isin(gold_keys.index)]
     if len(nuts2_rows) < 20:
         # too sparse at NUTS2 to trust -- degrade to country-level broadcast
         df["geo2"] = df[geo_col].astype(str).str.upper().str[:2]
         country_level = df[df["geo2"].str.len() == 2].groupby("geo2")[val_col].mean()
-        return broadcast_country_to_nuts2(country_level, gold_keys)
-    return nuts2_rows.groupby("geo4")[val_col].mean().reindex(gold_keys.index)
+        return broadcast_country_to_nuts2(country_level, gold_keys), True
+    return nuts2_rows.groupby("geo4")[val_col].mean().reindex(gold_keys.index), False
 
 
 def _parse_oecd_fiscal_autonomy(gold_keys: pd.DataFrame) -> pd.Series | None:
@@ -287,7 +324,33 @@ def harmonise_governance(gold_keys: pd.DataFrame, fetch_results: dict[str, bool]
 
     _add("smart_spec_strategy_flag", _parse_s3_strategies(gold_keys), "s3_strategies")
     _add("cluster_org_count", _parse_cluster_registry(gold_keys), "cluster_registry")
-    _add("institutional_diversity_score", _parse_educ_institutions(gold_keys), "educ_institutions")
+
+    educ_series, educ_is_broadcast = _parse_educ_institutions(gold_keys)
+    _add("institutional_diversity_score", educ_series, "educ_institutions")
+    if educ_series is not None:
+        # A country-level broadcast is never null (isna() is always False),
+        # so the generic isna()-based flag from _add() above would falsely
+        # read as fully resolved at NUTS2. Overwrite the flag and status to
+        # tell the truth: this is a country-level proxy, not a NUTS2-resolved
+        # value -- and the underlying source (Eurostat educ_uoe_enrt01,
+        # tertiary enrolment headcounts) is itself a proxy for institutional
+        # diversity, not a direct institution count.
+        if educ_is_broadcast:
+            out["institutional_diversity_score_imputed_flag"] = True
+            gap_report["institutional_diversity_score"] = {
+                "status": "COUNTRY_BROADCAST",
+                "reason": (
+                    "NUTS2 coverage in Eurostat educ_uoe_enrt01 was too sparse "
+                    "(<20 regions) to trust -- degraded to a country-level mean "
+                    "broadcast across all NUTS2 regions of that country. This "
+                    "is a country-level proxy, NOT a value resolved at NUTS2, "
+                    "and the source itself (tertiary enrolment headcounts) is "
+                    "an approximation of institutional diversity, not a direct "
+                    "institution count."
+                ),
+                "n_null": int(out["institutional_diversity_score"].isna().sum()),
+            }
+
     _add("rda_capacity_index", _parse_esif_programmes(gold_keys), "esif_programmes")
     _add(
         "regional_fiscal_autonomy_pct",
@@ -306,6 +369,18 @@ def harmonise_governance(gold_keys: pd.DataFrame, fetch_results: dict[str, bool]
 
 def append_to_gold(governance_df: pd.DataFrame) -> dict:
     gold = pd.read_parquet(GOLD_PATH)
+
+    # A prior run of this same script may have already appended these exact
+    # governance columns -- that's not a collision, it's idempotent re-run
+    # behavior, so drop this script's own previous output before checking
+    # for collisions. Anything left over that still collides is a genuine,
+    # unrelated pre-existing Gold column and should still block the run.
+    own_cols_present = [
+        c for c in governance_df.columns if c in gold.columns and c in GOVERNANCE_COLUMNS
+    ]
+    if own_cols_present:
+        gold = gold.drop(columns=own_cols_present)
+
     collisions = set(governance_df.columns) & set(gold.columns)
     if collisions:
         raise ValueError(
