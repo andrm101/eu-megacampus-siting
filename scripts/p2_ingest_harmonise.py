@@ -124,39 +124,75 @@ def parse_renewable_share() -> tuple[str, pd.Series]:
 
 
 def parse_rail_freight() -> tuple[str, pd.Series]:
-    """D05: tran_r_rapa — total rail goods loaded+unloaded, NUTS2, thousand tonnes."""
-    df = _read_sdmx(RAW / "eurostat" / "tran_r_rapa.csv")
+    """D05: tran_r_rago -- national+international railway goods transport by
+    loading/unloading NUTS2 region, tonnes.
+
+    NOTE (2026-09-26 fix): this previously read tran_r_rapa.csv, which is
+    Eurostat's *passengers* dataset ("rapa" = embarking/disembarking
+    passengers), not freight -- a one-letter dataset-code mixup with the
+    correct tran_r_rago ("rago" = goods) series. tran_r_rapa's `geo` column
+    is also only ever 2-char country codes in this extract, which combined
+    with the wrong dataset meant every row was filtered out by the old
+    NUTS2-length check, silently producing an all-zero feature via
+    reindex().fillna(0.0) at the call site. tran_r_rago has genuine NUTS2
+    granularity, but as bilateral (loading-region, unloading-region) flow
+    data: the `geo` column there is a reporting-country dimension, and the
+    actual NUTS2 detail lives in c_load/c_unload. A region's total rail
+    freight is the sum of tonnage where it appears as either the loading or
+    the unloading region.
+    """
+    df = _read_sdmx(RAW / "eurostat" / "tran_r_rago.csv")
     df.columns = [c.lower().strip() for c in df.columns]
-    geo_col = next((c for c in df.columns if c == "geo"), df.columns[0])
     time_col = next((c for c in df.columns if "time" in c), None)
     val_col = "obs_value"
     if val_col not in df.columns:
         val_col = next((c for c in df.columns if "obs" in c), df.columns[-3])
-    # Sum loaded + unloaded across all tra_meas values that contain tonnes
-    for col in ["unit"]:
-        if col in df.columns:
-            df = df[df[col].str.upper().str.contains("T", na=False)]
-    # NUTS2 = 4-char codes
-    df = df[df[geo_col].str.len() == 4]
+    if "unit" in df.columns:
+        df = df[df["unit"].str.upper() == "T"]
     df[val_col] = pd.to_numeric(df[val_col], errors="coerce")
-    agg = df.groupby([geo_col, time_col])[val_col].sum().reset_index()
-    year, series = _pick_year(agg, geo_col, time_col, val_col)
+
+    loaded = df[df["c_load"].str.len() == 4].rename(columns={"c_load": "nuts2"})
+    unloaded = df[df["c_unload"].str.len() == 4].rename(columns={"c_unload": "nuts2"})
+    combined = pd.concat([
+        loaded[["nuts2", time_col, val_col]],
+        unloaded[["nuts2", time_col, val_col]],
+    ], ignore_index=True)
+
+    agg = combined.groupby(["nuts2", time_col])[val_col].sum().reset_index()
+    year, series = _pick_year(agg, "nuts2", time_col, val_col)
     series.name = "rail_freight_ktonnes"
-    return year or "2021", series
+    return year or "2020", series
 
 
 def parse_port_throughput() -> tuple[str, pd.Series]:
-    """D06: mar_go_aa — port throughput aggregated to country (thousand tonnes)."""
+    """D06: mar_go_aa — port throughput aggregated to country (thousand tonnes).
+
+    NOTE (2026-09-26 fix): mar_go_aa.csv has no `geo` column -- the old code's
+    `next((c for c in df.columns if c == "geo"), df.columns[0])` fallback
+    silently used `df.columns[0]` ("dataflow", a constant string like
+    "ESTAT:MAR_GO_AA(1.0)" for every row), whose first 2 characters ("ES")
+    coincidentally matched Spain's real ISO code. That made every country's
+    port tonnage collapse into one mislabeled "ES" total, leaving 26 of 27
+    countries with no matching broadcast target -- which is exactly why the
+    Gold-layer feature ended up as a single EU-median-imputed constant for
+    92% of regions (see scripts/p3_eda_extended.py's low-variance flag).
+    The actual geo dimension is `rep_mar` (reporting maritime area); country
+    totals are the rows where it's already a 2-char country code (as
+    opposed to individual port codes), with `direct == "TOTAL"` to avoid
+    double-counting inbound+outbound separately.
+    """
     df = _read_sdmx(RAW / "eurostat" / "mar_go_aa.csv")
     df.columns = [c.lower().strip() for c in df.columns]
-    geo_col = next((c for c in df.columns if c == "geo"), df.columns[0])
     time_col = next((c for c in df.columns if "time" in c), None)
     val_col = "obs_value"
     if val_col not in df.columns:
         val_col = next((c for c in df.columns if "obs" in c), df.columns[-3])
     df[val_col] = pd.to_numeric(df[val_col], errors="coerce")
-    # Extract country code from port code (first 2 chars)
-    df["country_code"] = df[geo_col].str[:2].str.upper()
+
+    df = df[df["rep_mar"].str.len() == 2]
+    df["country_code"] = df["rep_mar"].str.upper()
+    if "direct" in df.columns:
+        df = df[df["direct"] == "TOTAL"]
     df = df[df["country_code"].isin(EU27)]
     agg = df.groupby(["country_code", time_col])[val_col].sum().reset_index()
     year, series = _pick_year(agg, "country_code", time_col, val_col)
@@ -503,9 +539,16 @@ def main() -> None:
         # Rail freight
         try:
             yr, s = parse_rail_freight()
-            s = s.reindex(gold.index).fillna(0.0)
+            # NOTE (2026-09-26 fix): no longer .fillna(0.0) here -- a region
+            # genuinely missing from tran_r_rago (no reported rail freight
+            # data) is not the same as a region with real zero rail freight
+            # traffic. Leaving it NaN lets the Step 5 generic imputation
+            # (country median, then EU median) impute it properly and set
+            # rail_freight_ktonnes_imputed_flag=True, instead of silently
+            # asserting a false "real" zero for every unmatched region.
+            s = s.reindex(gold.index)
             new_features["rail_freight_ktonnes"] = s
-            year_alignment.append({"feature": "rail_freight_ktonnes", "source": "tran_r_rapa", "year": yr, "nuts_level": "nuts2"})
+            year_alignment.append({"feature": "rail_freight_ktonnes", "source": "tran_r_rago", "year": yr, "nuts_level": "nuts2"})
         except Exception as e:
             ingestion_report["decisions"].append({"feature": "rail_freight_ktonnes", "action": "SKIP", "reason": str(e)})
 

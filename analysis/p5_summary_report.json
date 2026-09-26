@@ -37,17 +37,17 @@
     },
     "T3": {
       "label": "Semiconductors / Advanced Electronics",
-      "n_tier1": 17,
-      "n_tier2": 18,
-      "n_shortlisted": 35,
-      "score_mean": 0.41,
+      "n_tier1": 33,
+      "n_tier2": 42,
+      "n_shortlisted": 75,
+      "score_mean": 0.492,
       "score_std": 0.187,
-      "uncertainty_mean": 0.246,
-      "structural_readiness_median": 0.889,
+      "uncertainty_mean": 0.176,
+      "structural_readiness_median": 0.778,
       "top_gap_features": [
         "electricity_price_eur_kwh",
-        "artificial_land_pct",
-        "doing_business_score"
+        "rail_freight_ktonnes",
+        "cit_rate_pct"
       ]
     },
     "T4": {
@@ -98,16 +98,16 @@
     "T7": {
       "label": "Deep-Tech Robotics Campus",
       "n_tier1": 8,
-      "n_tier2": 24,
-      "n_shortlisted": 32,
-      "score_mean": 0.406,
-      "score_std": 0.169,
-      "uncertainty_mean": 0.054,
+      "n_tier2": 23,
+      "n_shortlisted": 31,
+      "score_mean": 0.402,
+      "score_std": 0.171,
+      "uncertainty_mean": 0.061,
       "structural_readiness_median": 0.875,
       "top_gap_features": [
+        "rail_freight_ktonnes",
         "gerd_hes_pct_gdp",
-        "doing_business_score",
-        "epo_patents_per_mio_pop"
+        "doing_business_score"
       ]
     },
     "T8": {

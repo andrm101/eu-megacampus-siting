@@ -1,8 +1,8 @@
 feature,source,year,nuts_level
 electricity_price_eur_kwh,nrg_pc_205,2025-S2,country
 renewable_energy_share_pct,nrg_ind_ren,2024,country
-rail_freight_ktonnes,tran_r_rapa,2021,nuts2
-port_throughput_ktonnes,mar_go_aa,2025,country
+rail_freight_ktonnes,tran_r_rago,2020,nuts2
+port_throughput_ktonnes,mar_go_aa,2024,country
 gerd_gov_pct_gdp,rd_e_gerdsc,2024,country
 gerd_hes_pct_gdp,rd_e_gerdsc,2024,country
 gerd_def_pct_gdp,rd_e_gerdsc,2024,country

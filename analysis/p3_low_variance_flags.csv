@@ -9,8 +9,8 @@ gerd_gov_pct_gdp,19,0.4622713552990494,False
 gerd_hes_pct_gdp,25,0.4121444809666685,False
 ntc_import_mw,22,0.6529266120327369,False
 nuclear_capacity_mw,21,3.883729296830432,False
-port_throughput_ktonnes,1,0.0,True
-rail_freight_ktonnes,1,,True
+port_throughput_ktonnes,21,0.558168032662443,False
+rail_freight_ktonnes,215,1.9727301715128052,False
 renewable_energy_share_pct,26,0.4170607927060427,False
 ultrafast_broadband_pct,168,0.03177527992425785,False
 water_exploitation_index,20,0.4978891245742105,False

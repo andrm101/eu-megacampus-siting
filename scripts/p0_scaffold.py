@@ -146,10 +146,10 @@ def write_catalog_stub() -> None:
                 "id": "D05",
                 "label": "Rail freight connectivity",
                 "source": "Eurostat",
-                "code": "tran_r_rapa",
+                "code": "tran_r_rago",
                 "purpose": "SC2 logistics / inland freight access",
                 "status": "to_download",
-                "local_path": "data/raw/eurostat/tran_r_rapa.csv",
+                "local_path": "data/raw/eurostat/tran_r_rago.csv",
             },
             {
                 "id": "D06",

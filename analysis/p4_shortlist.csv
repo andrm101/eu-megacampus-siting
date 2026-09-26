@@ -94,41 +94,81 @@ SE31,T2,Biotechnology / Life Sciences,0.6372159683252361,0.05144628099173554,Nor
 SE32,T2,Biotechnology / Life Sciences,0.6347340693031086,0.05144628099173554,Mellersta Norrland,SE,Established industrial regions
 SE33,T2,Biotechnology / Life Sciences,0.6878606871999138,0.05144628099173554,Övre Norrland,SE,Established industrial regions
 SK01,T2,Biotechnology / Life Sciences,0.7159651100815538,0.05144628099173554,Bratislavský kraj,SK,Frontier innovation regions
-BE10,T3,Semiconductors / Advanced Electronics,0.6812110434721117,0.24586776859504134,Région de Bruxelles-Capitale/ Brussels Hoofdstedelijk Gewest,BE,Frontier innovation regions
-BE31,T3,Semiconductors / Advanced Electronics,0.8885357197723806,0.24586776859504134,Prov. Brabant Wallon,BE,Frontier innovation regions
-CZ01,T3,Semiconductors / Advanced Electronics,0.6360464863375996,0.24586776859504134,Praha,CZ,Frontier innovation regions
-DE13,T3,Semiconductors / Advanced Electronics,0.6119163112011344,0.24586776859504134,Freiburg,DE,Established industrial regions
-DE14,T3,Semiconductors / Advanced Electronics,0.6891267006590025,0.24586776859504134,Tübingen,DE,Frontier innovation regions
-DE21,T3,Semiconductors / Advanced Electronics,0.6564998960625553,0.24586776859504134,Oberbayern,DE,Frontier innovation regions
-DE23,T3,Semiconductors / Advanced Electronics,0.6143751937452357,0.24586776859504134,Oberpfalz,DE,Established industrial regions
-DE30,T3,Semiconductors / Advanced Electronics,0.6302655379208196,0.24586776859504134,Berlin,DE,Frontier innovation regions
-DK01,T3,Semiconductors / Advanced Electronics,1.0,0.24586776859504134,Hovedstaden,DK,Frontier innovation regions
-DK02,T3,Semiconductors / Advanced Electronics,0.6171916322115191,0.24586776859504134,Sjælland,DK,Established industrial regions
-EE00,T3,Semiconductors / Advanced Electronics,0.677172964802836,0.24586776859504134,Eesti,EE,Established industrial regions
-FI19,T3,Semiconductors / Advanced Electronics,0.7206322857981561,0.24586776859504134,Länsi-Suomi,FI,Established industrial regions
-FI1B,T3,Semiconductors / Advanced Electronics,0.9098978635805368,0.24586776859504134,Helsinki-Uusimaa,FI,Frontier innovation regions
-FI1C,T3,Semiconductors / Advanced Electronics,0.7472284124913952,0.24586776859504134,Etelä-Suomi,FI,Established industrial regions
-FI1D,T3,Semiconductors / Advanced Electronics,0.7764110478526838,0.24586776859504134,Pohjois- ja Itä-Suomi,FI,Established industrial regions
-FI20,T3,Semiconductors / Advanced Electronics,0.6980799736037125,0.24586776859504134,Åland,FI,Emerging capacity regions
-FR10,T3,Semiconductors / Advanced Electronics,0.6735209194273222,0.24586776859504134,Ile-de-France,FR,Frontier innovation regions
-FRB0,T3,Semiconductors / Advanced Electronics,0.6061701643794934,0.24586776859504134,Centre — Val de Loire,FR,Emerging capacity regions
-FRC2,T3,Semiconductors / Advanced Electronics,0.7473308850996755,0.24586776859504134,Franche-Comté,FR,Emerging capacity regions
-FRK2,T3,Semiconductors / Advanced Electronics,0.6121119854013422,0.24586776859504134,Rhône-Alpes,FR,Established industrial regions
-HR05,T3,Semiconductors / Advanced Electronics,0.6757190887367591,0.24586776859504134,Grad Zagreb,HR,Frontier innovation regions
-HU11,T3,Semiconductors / Advanced Electronics,0.739453778021328,0.24586776859504134,Budapest,HU,Frontier innovation regions
-IE04,T3,Semiconductors / Advanced Electronics,0.6122294064739766,0.24586776859504134,Northern and Western,IE,Established industrial regions
-IE05,T3,Semiconductors / Advanced Electronics,0.7581260463453412,0.24586776859504134,Southern,IE,Frontier innovation regions
-IE06,T3,Semiconductors / Advanced Electronics,0.7106491656087297,0.24586776859504134,Eastern and Midland,IE,Frontier innovation regions
-LT01,T3,Semiconductors / Advanced Electronics,0.7491595663145015,0.24586776859504134,Sostinės regionas,LT,Frontier innovation regions
-PL91,T3,Semiconductors / Advanced Electronics,0.6558439596026157,0.24586776859504134,Warszawski stołeczny,PL,Frontier innovation regions
-SE11,T3,Semiconductors / Advanced Electronics,0.9063025576009806,0.24586776859504134,Stockholm,SE,Frontier innovation regions
-SE12,T3,Semiconductors / Advanced Electronics,0.7596579322365784,0.24586776859504134,Östra Mellansverige,SE,Frontier innovation regions
-SE21,T3,Semiconductors / Advanced Electronics,0.7291522668105649,0.24586776859504134,Småland med öarna,SE,Established industrial regions
-SE22,T3,Semiconductors / Advanced Electronics,0.7910862067179192,0.24586776859504134,Sydsverige,SE,Frontier innovation regions
-SE23,T3,Semiconductors / Advanced Electronics,0.7816925996638985,0.24586776859504134,Västsverige,SE,Frontier innovation regions
-SE31,T3,Semiconductors / Advanced Electronics,0.6749233048966441,0.24586776859504134,Norra Mellansverige,SE,Established industrial regions
-SE32,T3,Semiconductors / Advanced Electronics,0.6774229386781323,0.24586776859504134,Mellersta Norrland,SE,Established industrial regions
-SE33,T3,Semiconductors / Advanced Electronics,0.7280533748428671,0.24586776859504134,Övre Norrland,SE,Established industrial regions
+AT13,T3,Semiconductors / Advanced Electronics,0.6141186714731839,0.176078971533517,Wien,AT,Frontier innovation regions
+AT21,T3,Semiconductors / Advanced Electronics,0.6643619345355648,0.176078971533517,Kärnten,AT,Established industrial regions
+AT33,T3,Semiconductors / Advanced Electronics,0.612900902077836,0.176078971533517,Tirol,AT,Established industrial regions
+BE10,T3,Semiconductors / Advanced Electronics,0.760731395450122,0.176078971533517,Région de Bruxelles-Capitale/ Brussels Hoofdstedelijk Gewest,BE,Frontier innovation regions
+BE24,T3,Semiconductors / Advanced Electronics,0.607140932541473,0.176078971533517,Prov. Vlaams-Brabant,BE,Frontier innovation regions
+BE31,T3,Semiconductors / Advanced Electronics,0.9726284448727326,0.176078971533517,Prov. Brabant Wallon,BE,Frontier innovation regions
+BE35,T3,Semiconductors / Advanced Electronics,0.6136052415328136,0.176078971533517,Prov. Namur,BE,Emerging capacity regions
+CZ01,T3,Semiconductors / Advanced Electronics,0.738723380695334,0.176078971533517,Praha,CZ,Frontier innovation regions
+DE11,T3,Semiconductors / Advanced Electronics,0.6491158036895534,0.176078971533517,Stuttgart,DE,Frontier innovation regions
+DE12,T3,Semiconductors / Advanced Electronics,0.6473265465085877,0.176078971533517,Karlsruhe,DE,Frontier innovation regions
+DE13,T3,Semiconductors / Advanced Electronics,0.7071989750027586,0.176078971533517,Freiburg,DE,Established industrial regions
+DE14,T3,Semiconductors / Advanced Electronics,0.7748045393310868,0.176078971533517,Tübingen,DE,Frontier innovation regions
+DE21,T3,Semiconductors / Advanced Electronics,0.7995144273844798,0.176078971533517,Oberbayern,DE,Frontier innovation regions
+DE23,T3,Semiconductors / Advanced Electronics,0.7011465927567163,0.176078971533517,Oberpfalz,DE,Established industrial regions
+DE25,T3,Semiconductors / Advanced Electronics,0.6490806077648175,0.176078971533517,Mittelfranken,DE,Frontier innovation regions
+DE30,T3,Semiconductors / Advanced Electronics,0.7184882558359108,0.176078971533517,Berlin,DE,Frontier innovation regions
+DE60,T3,Semiconductors / Advanced Electronics,0.6707183145557869,0.176078971533517,Hamburg,DE,Frontier innovation regions
+DE71,T3,Semiconductors / Advanced Electronics,0.6627844335819321,0.176078971533517,Darmstadt,DE,Frontier innovation regions
+DE72,T3,Semiconductors / Advanced Electronics,0.6615224796000848,0.176078971533517,Gießen,DE,Established industrial regions
+DEA1,T3,Semiconductors / Advanced Electronics,0.6288883021520305,0.176078971533517,Düsseldorf,DE,Established industrial regions
+DEA2,T3,Semiconductors / Advanced Electronics,0.6041199406887398,0.176078971533517,Köln,DE,Frontier innovation regions
+DEB3,T3,Semiconductors / Advanced Electronics,0.6207865774790573,0.176078971533517,Rheinhessen-Pfalz,DE,Frontier innovation regions
+DED2,T3,Semiconductors / Advanced Electronics,0.6772293584912948,0.176078971533517,Dresden,DE,Established industrial regions
+DK01,T3,Semiconductors / Advanced Electronics,1.0,0.176078971533517,Hovedstaden,DK,Frontier innovation regions
+DK02,T3,Semiconductors / Advanced Electronics,0.6071396734205504,0.176078971533517,Sjælland,DK,Established industrial regions
+EE00,T3,Semiconductors / Advanced Electronics,0.6380209989195345,0.176078971533517,Eesti,EE,Established industrial regions
+ES11,T3,Semiconductors / Advanced Electronics,0.621618597280028,0.176078971533517,Galicia,ES,Emerging capacity regions
+ES12,T3,Semiconductors / Advanced Electronics,0.6661204933536005,0.176078971533517,Principado de Asturias,ES,Emerging capacity regions
+ES13,T3,Semiconductors / Advanced Electronics,0.6935023072660952,0.176078971533517,Cantabria,ES,Emerging capacity regions
+ES21,T3,Semiconductors / Advanced Electronics,0.7742132855614587,0.176078971533517,País Vasco,ES,Established industrial regions
+ES22,T3,Semiconductors / Advanced Electronics,0.710135730338925,0.176078971533517,Comunidad Foral de Navarra,ES,Established industrial regions
+ES24,T3,Semiconductors / Advanced Electronics,0.6379402818287392,0.176078971533517,Aragón,ES,Established industrial regions
+ES30,T3,Semiconductors / Advanced Electronics,0.7729753473354699,0.176078971533517,Comunidad de Madrid,ES,Frontier innovation regions
+ES41,T3,Semiconductors / Advanced Electronics,0.6346299785932763,0.176078971533517,Castilla y León,ES,Emerging capacity regions
+ES51,T3,Semiconductors / Advanced Electronics,0.7839532902847768,0.176078971533517,Cataluña,ES,Established industrial regions
+FI19,T3,Semiconductors / Advanced Electronics,0.7352972551591727,0.176078971533517,Länsi-Suomi,FI,Established industrial regions
+FI1B,T3,Semiconductors / Advanced Electronics,0.9150035665935186,0.176078971533517,Helsinki-Uusimaa,FI,Frontier innovation regions
+FI1C,T3,Semiconductors / Advanced Electronics,0.7843078430966164,0.176078971533517,Etelä-Suomi,FI,Established industrial regions
+FI1D,T3,Semiconductors / Advanced Electronics,0.8147908173257236,0.176078971533517,Pohjois- ja Itä-Suomi,FI,Established industrial regions
+FI20,T3,Semiconductors / Advanced Electronics,0.7231415901336031,0.176078971533517,Åland,FI,Emerging capacity regions
+FR10,T3,Semiconductors / Advanced Electronics,0.7504530315610435,0.176078971533517,Ile-de-France,FR,Frontier innovation regions
+FRB0,T3,Semiconductors / Advanced Electronics,0.6814933930525022,0.176078971533517,Centre — Val de Loire,FR,Emerging capacity regions
+FRC2,T3,Semiconductors / Advanced Electronics,0.8259194843881248,0.176078971533517,Franche-Comté,FR,Emerging capacity regions
+FRD2,T3,Semiconductors / Advanced Electronics,0.608841239320565,0.176078971533517,Haute-Normandie,FR,Emerging capacity regions
+FRF1,T3,Semiconductors / Advanced Electronics,0.6737545752062867,0.176078971533517,Alsace,FR,Emerging capacity regions
+FRH0,T3,Semiconductors / Advanced Electronics,0.6481275082205987,0.176078971533517,Bretagne,FR,Emerging capacity regions
+FRJ2,T3,Semiconductors / Advanced Electronics,0.6723122036761368,0.176078971533517,Midi-Pyrénées,FR,Established industrial regions
+FRK1,T3,Semiconductors / Advanced Electronics,0.6282220521659855,0.176078971533517,Auvergne,FR,Emerging capacity regions
+FRK2,T3,Semiconductors / Advanced Electronics,0.6889776278559275,0.176078971533517,Rhône-Alpes,FR,Established industrial regions
+HR05,T3,Semiconductors / Advanced Electronics,0.632895085485309,0.176078971533517,Grad Zagreb,HR,Frontier innovation regions
+HU11,T3,Semiconductors / Advanced Electronics,0.8274347836267735,0.176078971533517,Budapest,HU,Frontier innovation regions
+IE05,T3,Semiconductors / Advanced Electronics,0.7302267678140254,0.176078971533517,Southern,IE,Frontier innovation regions
+IE06,T3,Semiconductors / Advanced Electronics,0.6830188218323097,0.176078971533517,Eastern and Midland,IE,Frontier innovation regions
+LT01,T3,Semiconductors / Advanced Electronics,0.7153093176454423,0.176078971533517,Sostinės regionas,LT,Frontier innovation regions
+LU00,T3,Semiconductors / Advanced Electronics,0.6285305532252148,0.176078971533517,Luxembourg,LU,Frontier innovation regions
+NL11,T3,Semiconductors / Advanced Electronics,0.6162273242144342,0.176078971533517,Groningen,NL,Frontier innovation regions
+NL13,T3,Semiconductors / Advanced Electronics,0.6245396597278702,0.176078971533517,Drenthe,NL,Established industrial regions
+NL21,T3,Semiconductors / Advanced Electronics,0.6665664135217385,0.176078971533517,Overijssel,NL,Frontier innovation regions
+NL22,T3,Semiconductors / Advanced Electronics,0.6563214400091623,0.176078971533517,Gelderland,NL,Frontier innovation regions
+NL23,T3,Semiconductors / Advanced Electronics,0.6571407268182664,0.176078971533517,Flevoland,NL,Frontier innovation regions
+NL31,T3,Semiconductors / Advanced Electronics,0.6436512780422781,0.176078971533517,Utrecht,NL,Frontier innovation regions
+NL32,T3,Semiconductors / Advanced Electronics,0.7195632042112502,0.176078971533517,Noord-Holland,NL,Frontier innovation regions
+NL33,T3,Semiconductors / Advanced Electronics,0.7256872540701735,0.176078971533517,Zuid-Holland,NL,Frontier innovation regions
+NL41,T3,Semiconductors / Advanced Electronics,0.6996179757299072,0.176078971533517,Noord-Brabant,NL,Frontier innovation regions
+NL42,T3,Semiconductors / Advanced Electronics,0.612813264194891,0.176078971533517,Limburg (NL),NL,Frontier innovation regions
+PL22,T3,Semiconductors / Advanced Electronics,0.6364790491236393,0.176078971533517,Śląskie,PL,Emerging capacity regions
+PL91,T3,Semiconductors / Advanced Electronics,0.6781646695407083,0.176078971533517,Warszawski stołeczny,PL,Frontier innovation regions
+SE11,T3,Semiconductors / Advanced Electronics,0.9371400755585535,0.176078971533517,Stockholm,SE,Frontier innovation regions
+SE12,T3,Semiconductors / Advanced Electronics,0.7877682140054233,0.176078971533517,Östra Mellansverige,SE,Frontier innovation regions
+SE21,T3,Semiconductors / Advanced Electronics,0.7556558868778553,0.176078971533517,Småland med öarna,SE,Established industrial regions
+SE22,T3,Semiconductors / Advanced Electronics,0.8206400754303195,0.176078971533517,Sydsverige,SE,Frontier innovation regions
+SE23,T3,Semiconductors / Advanced Electronics,0.8096270298317823,0.176078971533517,Västsverige,SE,Frontier innovation regions
+SE31,T3,Semiconductors / Advanced Electronics,0.7020808752233647,0.176078971533517,Norra Mellansverige,SE,Established industrial regions
+SE32,T3,Semiconductors / Advanced Electronics,0.702957397154687,0.176078971533517,Mellersta Norrland,SE,Established industrial regions
+SE33,T3,Semiconductors / Advanced Electronics,0.7544927431552542,0.176078971533517,Övre Norrland,SE,Established industrial regions
 AT11,T4,Cleantech / Green Technology,0.7481094984383829,0.16336088154269973,Burgenland,AT,Emerging capacity regions
 AT12,T4,Cleantech / Green Technology,0.632269182198283,0.16336088154269973,Niederösterreich,AT,Established industrial regions
 AT21,T4,Cleantech / Green Technology,0.7199419282746825,0.16336088154269973,Kärnten,AT,Established industrial regions
@@ -265,38 +305,37 @@ SE23,T6,HALEU / Advanced Nuclear,0.988453874397915,0.6866391184573003,Västsveri
 SE31,T6,HALEU / Advanced Nuclear,0.6695217430562584,0.6866391184573003,Norra Mellansverige,SE,Established industrial regions
 SE32,T6,HALEU / Advanced Nuclear,0.6762768830871996,0.6866391184573003,Mellersta Norrland,SE,Established industrial regions
 SE33,T6,HALEU / Advanced Nuclear,0.6846192764229893,0.6866391184573003,Övre Norrland,SE,Established industrial regions
-AT13,T7,Deep-Tech Robotics Campus,0.6153623795093901,0.05396208070004861,Wien,AT,Frontier innovation regions
-AT21,T7,Deep-Tech Robotics Campus,0.6186797928796914,0.05396208070004861,Kärnten,AT,Established industrial regions
-AT22,T7,Deep-Tech Robotics Campus,0.6257773729565387,0.05396208070004861,Steiermark,AT,Established industrial regions
-BE24,T7,Deep-Tech Robotics Campus,0.6074105808850885,0.05396208070004861,Prov. Vlaams-Brabant,BE,Frontier innovation regions
-BE31,T7,Deep-Tech Robotics Campus,0.8248461497696212,0.05396208070004861,Prov. Brabant Wallon,BE,Frontier innovation regions
-CZ01,T7,Deep-Tech Robotics Campus,0.615995102106004,0.05396208070004861,Praha,CZ,Frontier innovation regions
-DE11,T7,Deep-Tech Robotics Campus,0.7099180280336943,0.05396208070004861,Stuttgart,DE,Frontier innovation regions
-DE12,T7,Deep-Tech Robotics Campus,0.6890976917435393,0.05396208070004861,Karlsruhe,DE,Frontier innovation regions
-DE13,T7,Deep-Tech Robotics Campus,0.6702913293958812,0.05396208070004861,Freiburg,DE,Established industrial regions
-DE14,T7,Deep-Tech Robotics Campus,0.7408015846870369,0.05396208070004861,Tübingen,DE,Frontier innovation regions
-DE21,T7,Deep-Tech Robotics Campus,0.7826895218339887,0.05396208070004861,Oberbayern,DE,Frontier innovation regions
-DE23,T7,Deep-Tech Robotics Campus,0.6651742341481475,0.05396208070004861,Oberpfalz,DE,Established industrial regions
-DE25,T7,Deep-Tech Robotics Campus,0.6763445097682148,0.05396208070004861,Mittelfranken,DE,Frontier innovation regions
-DE30,T7,Deep-Tech Robotics Campus,0.6374264909849278,0.05396208070004861,Berlin,DE,Frontier innovation regions
-DE71,T7,Deep-Tech Robotics Campus,0.643111725403102,0.05396208070004861,Darmstadt,DE,Frontier innovation regions
-DEB3,T7,Deep-Tech Robotics Campus,0.6375506889106127,0.05396208070004861,Rheinhessen-Pfalz,DE,Frontier innovation regions
-DK01,T7,Deep-Tech Robotics Campus,1.0,0.05396208070004861,Hovedstaden,DK,Frontier innovation regions
-DK02,T7,Deep-Tech Robotics Campus,0.6359104202444998,0.05396208070004861,Sjælland,DK,Established industrial regions
-DK04,T7,Deep-Tech Robotics Campus,0.6843379507150651,0.05396208070004861,Midtjylland,DK,Frontier innovation regions
-DK05,T7,Deep-Tech Robotics Campus,0.6047128559552611,0.05396208070004861,Nordjylland,DK,Established industrial regions
-FI1B,T7,Deep-Tech Robotics Campus,0.7553244179456783,0.05396208070004861,Helsinki-Uusimaa,FI,Frontier innovation regions
-FR10,T7,Deep-Tech Robotics Campus,0.6265090255299897,0.05396208070004861,Ile-de-France,FR,Frontier innovation regions
-HU11,T7,Deep-Tech Robotics Campus,0.6309076147693454,0.05396208070004861,Budapest,HU,Frontier innovation regions
-IE05,T7,Deep-Tech Robotics Campus,0.6530482272439472,0.05396208070004861,Southern,IE,Frontier innovation regions
-IE06,T7,Deep-Tech Robotics Campus,0.6589236184518976,0.05396208070004861,Eastern and Midland,IE,Frontier innovation regions
-LT01,T7,Deep-Tech Robotics Campus,0.6122345815801163,0.05396208070004861,Sostinės regionas,LT,Frontier innovation regions
-NL41,T7,Deep-Tech Robotics Campus,0.6747220459160512,0.05396208070004861,Noord-Brabant,NL,Frontier innovation regions
-PL91,T7,Deep-Tech Robotics Campus,0.6892817185027567,0.05396208070004861,Warszawski stołeczny,PL,Frontier innovation regions
-SE11,T7,Deep-Tech Robotics Campus,0.8149779659165067,0.05396208070004861,Stockholm,SE,Frontier innovation regions
-SE12,T7,Deep-Tech Robotics Campus,0.6497335593640131,0.05396208070004861,Östra Mellansverige,SE,Frontier innovation regions
-SE22,T7,Deep-Tech Robotics Campus,0.7143654719563443,0.05396208070004861,Sydsverige,SE,Frontier innovation regions
-SE23,T7,Deep-Tech Robotics Campus,0.6695250862382696,0.05396208070004861,Västsverige,SE,Frontier innovation regions
+AT13,T7,Deep-Tech Robotics Campus,0.6122557870447016,0.06076810889645114,Wien,AT,Frontier innovation regions
+AT21,T7,Deep-Tech Robotics Campus,0.61428723156211,0.06076810889645114,Kärnten,AT,Established industrial regions
+AT22,T7,Deep-Tech Robotics Campus,0.6236003219222144,0.06076810889645114,Steiermark,AT,Established industrial regions
+BE24,T7,Deep-Tech Robotics Campus,0.6022476770100098,0.06076810889645114,Prov. Vlaams-Brabant,BE,Frontier innovation regions
+BE31,T7,Deep-Tech Robotics Campus,0.822253284161288,0.06076810889645114,Prov. Brabant Wallon,BE,Frontier innovation regions
+CZ01,T7,Deep-Tech Robotics Campus,0.6180029463309858,0.06076810889645114,Praha,CZ,Frontier innovation regions
+DE11,T7,Deep-Tech Robotics Campus,0.710387935188883,0.06076810889645114,Stuttgart,DE,Frontier innovation regions
+DE12,T7,Deep-Tech Robotics Campus,0.6896837429456815,0.06076810889645114,Karlsruhe,DE,Frontier innovation regions
+DE13,T7,Deep-Tech Robotics Campus,0.6709861691433167,0.06076810889645114,Freiburg,DE,Established industrial regions
+DE14,T7,Deep-Tech Robotics Campus,0.7390872748478133,0.06076810889645114,Tübingen,DE,Frontier innovation regions
+DE21,T7,Deep-Tech Robotics Campus,0.798119183551542,0.06076810889645114,Oberbayern,DE,Frontier innovation regions
+DE23,T7,Deep-Tech Robotics Campus,0.6633527830604105,0.06076810889645114,Oberpfalz,DE,Established industrial regions
+DE25,T7,Deep-Tech Robotics Campus,0.6745195993842198,0.06076810889645114,Mittelfranken,DE,Frontier innovation regions
+DE30,T7,Deep-Tech Robotics Campus,0.635585988181861,0.06076810889645114,Berlin,DE,Frontier innovation regions
+DE71,T7,Deep-Tech Robotics Campus,0.643323720155506,0.06076810889645114,Darmstadt,DE,Frontier innovation regions
+DEB3,T7,Deep-Tech Robotics Campus,0.6400560184163105,0.06076810889645114,Rheinhessen-Pfalz,DE,Frontier innovation regions
+DK01,T7,Deep-Tech Robotics Campus,1.0,0.06076810889645114,Hovedstaden,DK,Frontier innovation regions
+DK02,T7,Deep-Tech Robotics Campus,0.6311538298956876,0.06076810889645114,Sjælland,DK,Established industrial regions
+DK04,T7,Deep-Tech Robotics Campus,0.6801067652488917,0.06076810889645114,Midtjylland,DK,Frontier innovation regions
+FI1B,T7,Deep-Tech Robotics Campus,0.754546028941919,0.06076810889645114,Helsinki-Uusimaa,FI,Frontier innovation regions
+FR10,T7,Deep-Tech Robotics Campus,0.6216031695787838,0.06076810889645114,Ile-de-France,FR,Frontier innovation regions
+HU11,T7,Deep-Tech Robotics Campus,0.6282123526917334,0.06076810889645114,Budapest,HU,Frontier innovation regions
+IE05,T7,Deep-Tech Robotics Campus,0.6484220974187788,0.06076810889645114,Southern,IE,Frontier innovation regions
+IE06,T7,Deep-Tech Robotics Campus,0.6547524876991759,0.06076810889645114,Eastern and Midland,IE,Frontier innovation regions
+LT01,T7,Deep-Tech Robotics Campus,0.6071039568513156,0.06076810889645114,Sostinės regionas,LT,Frontier innovation regions
+NL41,T7,Deep-Tech Robotics Campus,0.6721649069166551,0.06076810889645114,Noord-Brabant,NL,Frontier innovation regions
+PL91,T7,Deep-Tech Robotics Campus,0.6899298174488173,0.06076810889645114,Warszawski stołeczny,PL,Frontier innovation regions
+SE11,T7,Deep-Tech Robotics Campus,0.8124241861481759,0.06076810889645114,Stockholm,SE,Frontier innovation regions
+SE12,T7,Deep-Tech Robotics Campus,0.6453712469431384,0.06076810889645114,Östra Mellansverige,SE,Frontier innovation regions
+SE22,T7,Deep-Tech Robotics Campus,0.7109865426550955,0.06076810889645114,Sydsverige,SE,Frontier innovation regions
+SE23,T7,Deep-Tech Robotics Campus,0.6652064110635795,0.06076810889645114,Västsverige,SE,Frontier innovation regions
 AT34,T8,Quantum / Photonics Anchor,0.6513105139411319,0.4509297520661157,Vorarlberg,AT,Established industrial regions
 BE24,T8,Quantum / Photonics Anchor,0.6498514095690335,0.4509297520661157,Prov. Vlaams-Brabant,BE,Frontier innovation regions
 BE31,T8,Quantum / Photonics Anchor,0.6800800163421866,0.4509297520661157,Prov. Brabant Wallon,BE,Frontier innovation regions

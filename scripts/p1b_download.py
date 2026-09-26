@@ -96,12 +96,14 @@ def fetch_d02(force: bool) -> bool:
     )
 
 
-# ─── D05 — Rail freight by NUTS2 (tran_r_rapa) ───────────────────────────────
+# ─── D05 — Rail freight by NUTS2 (tran_r_rago) ───────────────────────────────
+# NOTE (2026-09-26 fix): was tran_r_rapa, Eurostat's rail *passengers* dataset
+# (a one-letter code mixup) -- tran_r_rago is the actual goods/freight series.
 
 def fetch_d05(force: bool) -> bool:
     return fetch_eurostat(
-        "tran_r_rapa",
-        RAW / "eurostat" / "tran_r_rapa.csv",
+        "tran_r_rago",
+        RAW / "eurostat" / "tran_r_rago.csv",
         force,
         extra_params={"sinceTimePeriod": "2018"},
     )
@@ -559,7 +561,7 @@ def main() -> None:
     print("\n  [Eurostat SDMX-CSV]")
     results["D01_nrg_pc_205"]      = fetch_d01(force)
     results["D02_nrg_ind_ren"]     = fetch_d02(force)
-    results["D05_tran_r_rapa"]     = fetch_d05(force)
+    results["D05_tran_r_rago"]     = fetch_d05(force)
     results["D06_mar_go_aa"]       = fetch_d06(force)
     results["D07_rd_e_gerdsc"]     = fetch_d07(force)
     results["D11_isoc_r_broad_h"]  = fetch_d11(force)

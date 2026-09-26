@@ -33,9 +33,9 @@
       "n_gates": 2,
       "n_hard_stops": 0,
       "regions_all_gates_passed": 128,
-      "scenario_A": 13,
-      "scenario_B": 18,
-      "scenario_C": 4
+      "scenario_A": 23,
+      "scenario_B": 39,
+      "scenario_C": 13
     },
     "T4": {
       "label": "Cleantech / Green Technology",
@@ -70,7 +70,7 @@
       "n_hard_stops": 0,
       "regions_all_gates_passed": 157,
       "scenario_A": 7,
-      "scenario_B": 24,
+      "scenario_B": 23,
       "scenario_C": 1
     },
     "T8": {

@@ -129,11 +129,11 @@ NEW_DATASETS: list[dict] = [
     {
         "id": "D05", "group": "transport",
         "label": "Rail freight transport by NUTS2 region",
-        "source": "Eurostat", "code": "tran_r_rapa",
+        "source": "Eurostat", "code": "tran_r_rago",
         "reference_year": "2021", "nuts_level": "nuts2",
         "types": ["T3", "T7"],
         "status": "to_download",
-        "local_path": "data/raw/eurostat/tran_r_rapa.csv",
+        "local_path": "data/raw/eurostat/tran_r_rago.csv",
         "license": "Eurostat — free reuse with attribution",
         "access_method": "bulk_sdmx_csv",
         "null_rate_estimate": 0.25,

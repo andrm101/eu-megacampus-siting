@@ -205,10 +205,10 @@
       "null_rate": 0.0537
     },
     "rail_freight_ktonnes": {
-      "null_rate": 0.0
+      "null_rate": 0.1157
     },
     "port_throughput_ktonnes": {
-      "null_rate": 0.9215
+      "null_rate": 0.1777
     },
     "gerd_gov_pct_gdp": {
       "null_rate": 0.0537
