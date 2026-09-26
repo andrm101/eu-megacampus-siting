@@ -22,6 +22,9 @@ GOLD_ARTIFACTS = [
     "data/gold/megacampus_gold.parquet",
     "data/gold/suitability_scores.parquet",
     "data/gold/megacampus_governance.parquet",
+    # NOTE: data/gold/p12_nuts3_pilot.parquet is intentionally excluded --
+    # it's a standalone NUTS3 pilot artifact (P12), not part of the NUTS2
+    # reproducibility contract this list tracks.
 ]
 EXPECTED_HASHES_FILE = ROOT / "expected_hashes.json"
 

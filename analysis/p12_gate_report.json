@@ -1,0 +1,132 @@
+{
+  "children_present": {
+    "status": "PASS",
+    "counts": {
+      "DK01": 4,
+      "FI1B": 1,
+      "SE11": 1
+    }
+  },
+  "resolution_report": {
+    "status": "PASS",
+    "n_genuine_or_proxy": 2,
+    "n_total": 15,
+    "weight_coverage": {
+      "T5": {
+        "total_weight": 19,
+        "genuine_or_proxy_weight": 0,
+        "coverage_pct": 0.0
+      },
+      "T7": {
+        "total_weight": 17,
+        "genuine_or_proxy_weight": 5,
+        "coverage_pct": 29.4
+      }
+    },
+    "detail": {
+      "rail_freight_ktonnes": {
+        "status": "BROADCAST",
+        "reason": "no NUTS3 source per spec's resolvability table"
+      },
+      "water_exploitation_index": {
+        "status": "BROADCAST",
+        "reason": "no NUTS3 source per spec's resolvability table"
+      },
+      "electricity_price_eur_kwh": {
+        "status": "BROADCAST",
+        "reason": "no NUTS3 source per spec's resolvability table"
+      },
+      "renewable_energy_share_pct": {
+        "status": "BROADCAST",
+        "reason": "no NUTS3 source per spec's resolvability table"
+      },
+      "artificial_land_pct": {
+        "status": "BROADCAST",
+        "reason": "genuine source unavailable or too sparse -- degraded to broadcast"
+      },
+      "hrst_per_1000": {
+        "status": "BROADCAST",
+        "reason": "no NUTS3 source per spec's resolvability table"
+      },
+      "gerd_hes_pct_gdp": {
+        "status": "BROADCAST",
+        "reason": "no NUTS3 source per spec's resolvability table"
+      },
+      "ultrafast_broadband_pct": {
+        "status": "BROADCAST",
+        "reason": "no NUTS3 source per spec's resolvability table"
+      },
+      "score_talent": {
+        "status": "BROADCAST",
+        "reason": "no NUTS3 source per spec's resolvability table"
+      },
+      "ntc_import_mw": {
+        "status": "BROADCAST",
+        "reason": "no NUTS3 source per spec's resolvability table"
+      },
+      "epo_patents_per_mio_pop": {
+        "status": "GENUINE",
+        "reason": "resolved at NUTS3"
+      },
+      "score_cluster": {
+        "status": "BROADCAST",
+        "reason": "no NUTS3 source per spec's resolvability table"
+      },
+      "score_infra": {
+        "status": "BROADCAST",
+        "reason": "no NUTS3 source per spec's resolvability table"
+      },
+      "doing_business_score": {
+        "status": "BROADCAST",
+        "reason": "no NUTS3 source per spec's resolvability table"
+      },
+      "lq_nace_c26": {
+        "status": "PROXY",
+        "reason": "NACE-section-C location quotient, not the exact 2-digit NUTS2 measurement"
+      }
+    }
+  },
+  "gold_unchanged": {
+    "status": "PASS",
+    "unchanged": true,
+    "hash": "e3069056963ea4fa3f551fb11c044608bf73101a09227bcd730c6b25d573ff16",
+    "expected_hash": "e3069056963ea4fa3f551fb11c044608bf73101a09227bcd730c6b25d573ff16"
+  },
+  "overall_status": "PASS",
+  "sanity_check": {
+    "epo_patents_per_mio_pop": {
+      "DK01": {
+        "nuts3_mean": 213.71625,
+        "parent_gold_value": 241.166,
+        "relative_diff_pct": 11.4
+      },
+      "FI1B": {
+        "nuts3_mean": 410.553,
+        "parent_gold_value": 410.553,
+        "relative_diff_pct": 0.0
+      },
+      "SE11": {
+        "nuts3_mean": 396.849,
+        "parent_gold_value": 396.849,
+        "relative_diff_pct": 0.0
+      }
+    },
+    "lq_nace_c26": {
+      "DK01": {
+        "nuts3_mean": 0.8659508295531524,
+        "parent_gold_value": 4.735695746528274,
+        "relative_diff_pct": 81.7
+      },
+      "FI1B": {
+        "nuts3_mean": 0.6480197923570598,
+        "parent_gold_value": 1.6717350634469026,
+        "relative_diff_pct": 61.2
+      },
+      "SE11": {
+        "nuts3_mean": 0.5141330378334751,
+        "parent_gold_value": 0.937980820219562,
+        "relative_diff_pct": 45.2
+      }
+    }
+  }
+}
