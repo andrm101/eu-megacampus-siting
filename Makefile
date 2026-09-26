@@ -44,7 +44,7 @@ spatial:
 	$(PYTHON) scripts/p6_spatial_analysis.py
 
 feasibility:
-	$(PYTHON) scripts/p7_io_feasibility.py
+	$(PYTHON) scripts/p7_feasibility.py
 
 dashboard:
 	$(STREAMLIT) run scripts/p8_dashboard.py

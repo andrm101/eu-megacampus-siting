@@ -6,3 +6,5 @@ __pycache__/
 .venv/
 .env
 .ipynb_checkpoints/
+expected_hashes.json
+pipeline_audit.json
