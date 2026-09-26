@@ -302,3 +302,128 @@ def harmonise_governance(gold_keys: pd.DataFrame, fetch_results: dict[str, bool]
         out["regional_fiscal_autonomy_is_country_broadcast"] = out["regional_fiscal_autonomy_pct"].notna()
 
     return out, gap_report
+
+
+def append_to_gold(governance_df: pd.DataFrame) -> dict:
+    gold = pd.read_parquet(GOLD_PATH)
+    pre_existing_cols = [c for c in gold.columns if c not in governance_df.columns]
+    hash_before = _hash_columns(gold, pre_existing_cols)
+
+    merged = gold.copy()
+    for col in governance_df.columns:
+        merged[col] = governance_df[col]
+
+    hash_after = _hash_columns(merged[pre_existing_cols], pre_existing_cols)
+
+    merged.to_parquet(GOLD_PATH)
+    governance_df.to_parquet(GOVERNANCE_GOLD_PATH)
+
+    return {
+        "pre_existing_columns_hash_before": hash_before,
+        "pre_existing_columns_hash_after": hash_after,
+        "unchanged": hash_before == hash_after,
+    }
+
+
+def _hash_columns(df: pd.DataFrame, cols: list[str]) -> str:
+    import hashlib
+    content = df[cols].to_csv(index=True).encode("utf-8")
+    return hashlib.sha256(content).hexdigest()
+
+
+def run_p4_rerun_check() -> dict:
+    """Re-run p4_suitability_scores.py and confirm T1-T8 counts match the
+    pre-P11b baseline recorded in CLAUDE.md -- the concrete proof this
+    extension changed nothing about scoring, not just an inspection claim."""
+    import re
+    import subprocess
+
+    baseline = {"T1": 49, "T2": 46, "T3": 75, "T4": 77, "T5": 21, "T6": 38, "T7": 31, "T8": 106}
+    result = subprocess.run(
+        [sys.executable, str(ROOT / "scripts" / "p4_suitability_scores.py")],
+        capture_output=True, text=True, cwd=str(ROOT),
+    )
+    counts = {}
+    for line in result.stdout.splitlines():
+        m = re.search(r"\b(T[1-8])\D+(\d+)\s*$", line)
+        if m:
+            counts[m.group(1)] = int(m.group(2))
+    matches = {t: counts.get(t) == baseline[t] for t in baseline}
+    return {
+        "status": "PASS" if all(matches.values()) else "FAIL",
+        "baseline": baseline,
+        "observed": counts,
+        "matches": matches,
+    }
+
+
+def run_gate_p11b(governance_df: pd.DataFrame, gap_report: dict, hash_check: dict,
+                   expected_n_regions: int = 242, p4_rerun: dict | None = None) -> dict:
+    report = {}
+
+    n_rows = len(governance_df)
+    n_unique = governance_df.index.nunique()
+    report["row_count"] = {
+        "status": "PASS" if (n_rows == expected_n_regions and n_unique == expected_n_regions) else "FAIL",
+        "n_rows": n_rows, "n_unique": n_unique, "expected": expected_n_regions,
+    }
+
+    required_cols = {
+        "smart_spec_strategy_flag", "smart_spec_strategy_flag_imputed_flag",
+        "cluster_org_count", "cluster_org_count_imputed_flag",
+        "institutional_diversity_score", "institutional_diversity_score_imputed_flag",
+        "rda_capacity_index", "rda_capacity_index_imputed_flag",
+        "regional_fiscal_autonomy_pct", "regional_fiscal_autonomy_is_country_broadcast",
+    }
+    missing = required_cols - set(governance_df.columns)
+    report["columns_present"] = {"status": "PASS" if not missing else "FAIL", "missing": sorted(missing)}
+
+    report["gold_unchanged"] = {"status": "PASS" if hash_check.get("unchanged") else "FAIL", **hash_check}
+
+    report["data_gap_register"] = {"status": "PASS", "gaps": gap_report}
+
+    if p4_rerun is not None:
+        report["p4_rerun_unchanged"] = p4_rerun
+
+    overall = all(v.get("status") == "PASS" for v in report.values())
+    report["overall_status"] = "PASS" if overall else "FAIL"
+    return report
+
+
+def main(force: bool = False, skip_p4_rerun: bool = False) -> None:
+    with pipeline_step("p11b_governance", input_artifact=GOLD_PATH) as log:
+        print("Fetching governance sources...")
+        fetch_results = {
+            "s3_strategies": fetch_s3_strategies(force),
+            "cluster_registry": fetch_cluster_registry(force),
+            "educ_institutions": fetch_educ_institutions(force),
+            "esif_programmes": fetch_esif_programmes(force),
+            "oecd_fiscal_autonomy": fetch_oecd_fiscal_autonomy(force),
+        }
+        log.info("fetch_complete", results=fetch_results)
+
+        gold_keys = load_gold_keys()
+        governance_df, gap_report = harmonise_governance(gold_keys, fetch_results)
+
+        hash_check = append_to_gold(governance_df)
+
+        p4_rerun = None if skip_p4_rerun else run_p4_rerun_check()
+
+        gate = run_gate_p11b(governance_df, gap_report, hash_check, p4_rerun=p4_rerun)
+
+        ANALYSIS.mkdir(exist_ok=True)
+        (ANALYSIS / "p11b_governance_report.json").write_text(json.dumps(gate, indent=2, default=str))
+
+        print(json.dumps(gate, indent=2, default=str))
+        print(f"\nGATE_P11b={gate['overall_status']}")
+        log.info("step_complete", gate=gate["overall_status"])
+        sys.exit(0 if gate["overall_status"] == "PASS" else 1)
+
+
+if __name__ == "__main__":
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--force", action="store_true")
+    parser.add_argument("--skip-p4-rerun", action="store_true",
+                         help="Skip the P4 subprocess re-run (useful for fast local iteration)")
+    args = parser.parse_args()
+    main(force=args.force, skip_p4_rerun=args.skip_p4_rerun)

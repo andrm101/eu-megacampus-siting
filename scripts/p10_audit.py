@@ -21,6 +21,7 @@ sys.path.insert(0, str(ROOT))
 GOLD_ARTIFACTS = [
     "data/gold/megacampus_gold.parquet",
     "data/gold/suitability_scores.parquet",
+    "data/gold/megacampus_governance.parquet",
 ]
 EXPECTED_HASHES_FILE = ROOT / "expected_hashes.json"
 
