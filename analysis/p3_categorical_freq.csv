@@ -1,0 +1,12 @@
+feature,value,count,pct
+haleu_smr_eligible,False,122,50.4
+haleu_smr_eligible,True,120,49.6
+nuclear_policy,PRO,105,43.4
+nuclear_policy,PHASE_OUT,78,32.2
+nuclear_policy,NO_NUCLEAR,35,14.5
+nuclear_policy,NEUTRAL,15,6.2
+nuclear_policy,BANNED,9,3.7
+quantum_programme_tier,3,111,45.9
+quantum_programme_tier,2,81,33.5
+quantum_programme_tier,0,34,14.0
+quantum_programme_tier,1,16,6.6

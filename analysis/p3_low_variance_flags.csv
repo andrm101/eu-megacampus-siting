@@ -1,0 +1,16 @@
+feature,n_unique,coefficient_of_variation,flagged_low_variance
+artificial_land_pct,229,0.21306014943793855,False
+cit_rate_pct,18,0.23210158424382513,False
+doing_business_score,24,0.03628605708003481,False
+electricity_price_eur_kwh,26,0.19180873553474284,False
+eurohpc_proximity_score,6,0.7567813030217597,False
+gerd_def_pct_gdp,25,0.40984531395878826,False
+gerd_gov_pct_gdp,19,0.4622713552990494,False
+gerd_hes_pct_gdp,25,0.4121444809666685,False
+ntc_import_mw,22,0.6529266120327369,False
+nuclear_capacity_mw,21,3.883729296830432,False
+port_throughput_ktonnes,1,0.0,True
+rail_freight_ktonnes,1,,True
+renewable_energy_share_pct,26,0.4170607927060427,False
+ultrafast_broadband_pct,168,0.03177527992425785,False
+water_exploitation_index,20,0.4978891245742105,False
