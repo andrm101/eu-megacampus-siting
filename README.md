@@ -8,6 +8,22 @@ Operates under a **strategic intelligence** epistemological contract: composite 
 
 Consumes the [EU-Innovation-Panel](https://github.com/andrm101/eu-innovation-panel) Gold layer (242 NUTS2 × 66 features) as its upstream base, then re-clusters at **k=4** — an intentional interpretability override from the base study's k=2 solution, explicitly documented and gated on silhouette/ARI reporting.
 
+📖 **[Full abstract, pre-registered hypotheses, and methodology → project Wiki](https://github.com/andrm101/eu-megacampus-siting/wiki)**
+
+---
+
+## Site-intelligence at a glance
+
+<p align="center">
+  <img src="figures/p4_choropleth_grid.png" width="48%" alt="Composite suitability choropleth grid across 8 disruptor types" />
+  <img src="figures/p6_corridor_map.png" width="48%" alt="23 spatial corridors, 9 cross-border" />
+</p>
+
+<p align="center">
+  <img src="figures/p7_gate_waterfall.png" width="48%" alt="Feasibility gate waterfall" />
+  <img src="figures/p7_io_heatmap.png" width="48%" alt="Cross-type structural co-dependence heatmap" />
+</p>
+
 ---
 
 ## Key findings
