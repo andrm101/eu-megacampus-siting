@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>EU MegaCampus in 62 seconds</title>
+<link rel="stylesheet" href="motion.css">
+<style>
+  .ax { fill: rgba(244,247,250,.7); font-size: 14px; }
+  .lab { fill: rgba(244,247,250,.9); font-size: 15px; }
+  .legend { flex-direction: column; gap: 9px; }
+</style>
+</head>
+<body>
+<div id="stage">
+  <svg id="svg" width="1280" height="720" viewBox="0 0 1280 720"></svg>
+
+  <div class="txt" id="s1" style="left:330px;top:200px;width:840px">
+    <div class="kicker">EU MegaCampus Siting</div>
+    <div class="head" style="font-size:50px">Where in Europe could the next tech mega-campus go?</div>
+    <div class="body" id="s1b"></div>
+  </div>
+  <div class="txt" id="s2a"><div class="kicker">Suitability · T1</div><div class="head">AI / machine-learning hub</div><div class="body" id="b2a"></div></div>
+  <div class="txt" id="s2b"><div class="kicker">Suitability · T3</div><div class="head">Semiconductors and advanced electronics</div><div class="body" id="b2b"></div></div>
+  <div class="txt" id="s2c"><div class="kicker">Suitability · T8</div><div class="head">Quantum and photonics research anchor</div><div class="body" id="b2c"></div></div>
+  <div class="txt" id="s3">
+    <div class="kicker">Eight shortlists</div>
+    <div class="head">Some ecosystems fit many regions, others very few</div>
+    <div class="body" id="s3b"></div>
+  </div>
+  <div class="txt" id="s4">
+    <div class="kicker">Multi-type regions</div>
+    <div class="head">Nordic regions are shortlisted for the most types</div>
+    <div class="body" id="s4b"></div>
+  </div>
+  <div class="txt" id="s5">
+    <div class="kicker">Spatial corridors</div>
+    <div class="head">Suitable regions cluster, often across borders</div>
+    <div class="body" id="s5b"></div>
+  </div>
+  <div class="txt" id="s6" style="left:330px;top:215px;width:840px">
+    <div class="kicker">Strategic intelligence</div>
+    <div class="head" style="font-size:46px">Shortlists and corridors, framed as associations, not causes</div>
+    <div class="body">Composite indices, feasibility gates and spatial statistics on the EU-Innovation-Panel regional data.<br><b>github.com/andrm101/eu-megacampus-siting</b></div>
+  </div>
+
+  <div class="legend" id="leg2" style="left:64px;top:480px"></div>
+  <div class="legend" id="leg4" style="left:64px;top:480px"></div>
+  <div class="legend" id="leg5" style="left:64px;top:480px"><span><i style="background:#d95926"></i>cross-border corridor</span><span><i style="background:#3987e5"></i>national corridor</span><span><i style="background:#12304f;border:1px solid #355C7D"></i>outside a corridor</span></div>
+  <div class="src" id="src">Data: Eurostat regional statistics via EU-Innovation-Panel; NUTS 2021. Outermost regions not drawn.</div>
+</div>
+<script src="motion-kit.js"></script>
+<script>
+const { prog, $, el, scale, scenes, brand } = MK;
+const SC = { s1: [0, 6], s2a: [6, 12.2], s2b: [12, 18.2], s2c: [18, 24], s3: [24, 34], s4: [34, 46], s5: [46, 56], s6: [56, 62] };
+const DURATION = 62;
+const X0 = 570, Y0 = 80;
+const RAMP = ['#12304f', '#1c5cab', '#3987e5', '#86b6ef', '#cde2fb'];
+let D, G = {};
+function ramp(q) {
+  const x = MK.clamp(q) * (RAMP.length - 1), i = Math.min(RAMP.length - 2, Math.floor(x));
+  return MK.mix(RAMP[i], RAMP[i + 1], x - i);
+}
+function group(id) { const g = el('g', { id }, $('svg')); g.style.opacity = 0; return g; }
+
+function build(d) {
+  D = d;
+  MK.chrome($('svg'));
+  $('mark').setAttribute('transform', 'translate(110 225) scale(1.55)');
+  const T = Object.fromEntries(d.types.map(t => [t.id, t]));
+  $('s1b').innerHTML = `${d.n_regions} NUTS-2 regions scored for eight disruptor ecosystems, from AI hubs to advanced nuclear.`;
+
+  const g = G.map = group('map');
+  g.setAttribute('transform', `translate(${X0},${Y0})`);
+  G.regions = d.regions.map(r => ({ r, p: el('path', { d: r.d, stroke: '#081A2F', 'stroke-width': .6 }, g) }));
+  const lead = id => d.regions.reduce((a, r) => (r.s[id] > a.s[id] ? r : a));
+  const txt = id => `<b>${T[id].n}</b> regions have a composite suitability index of at least ${d.threshold.toFixed(2)}; ${T[id].tier1} of them reach the top tier (≥ ${d.tier1.toFixed(2)}). Highest type index: ${lead(id).name}.`;
+  $('b2a').innerHTML = txt('T1'); $('b2b').innerHTML = txt('T3'); $('b2c').innerHTML = txt('T8');
+  $('leg2').innerHTML = `<span><i style="background:linear-gradient(90deg,${RAMP.join(',')});width:140px"></i>suitability index, 0 → 1 (rescaled)</span>`;
+
+  // s3: shortlist size per type, top tier darker
+  const g3 = G.s3 = group('g3'), bx = scale(0, 110, X0 + 220, 1220), rh = 56;
+  G.bars = d.types.map((t, i) => {
+    const y = 120 + i * rh;
+    el('text', { x: X0 + 210, y: y + rh / 2 + 1, 'text-anchor': 'end', class: 'lab' }, g3, t.label.replace(' / ', ' / '));
+    const all = el('rect', { x: bx(0), y: y + 10, height: rh - 22, fill: '#86b6ef', rx: 2 }, g3);
+    const top = el('rect', { x: bx(0), y: y + 10, height: rh - 22, fill: '#1c5cab', rx: 2 }, g3);
+    const v = el('text', { y: y + rh / 2 + 1, fill: '#F4F7FA', 'font-size': 15, 'font-weight': 700 }, g3, t.n);
+    return { all, top, v, wa: bx(t.n) - bx(0), wt: bx(t.tier1) - bx(0) };
+  });
+  const sorted = [...d.types].sort((a, b) => b.n - a.n);
+  $('s3b').innerHTML = `Shortlists run from <b>${sorted[0].n}</b> regions (${sorted[0].label}) down to <b>${sorted[7].n}</b> (${sorted[7].label}). ` +
+    `<span style="color:#86b6ef">■</span> shortlisted, <span style="color:#1c5cab">■</span> top tier.`;
+
+  // s4 + s5 legends and text
+  const maxN = Math.max(...d.regions.map(r => r.n_types));
+  const all8 = d.regions.filter(r => r.n_types === maxN).map(r => r.name);
+  const none = d.n_none;
+  $('s4b').innerHTML = `<b>${all8.length} regions</b> clear the bar for all ${maxN} types: ${all8.join(', ')}. ` +
+    `${none} of the ${d.n_regions} regions clear it for none.`;
+  $('leg4').innerHTML = `<span><i style="background:linear-gradient(90deg,${RAMP.join(',')});width:140px"></i>types shortlisted, 0 → ${maxN}</span>`;
+  const mi = d.types.map(t => t.moran);
+  $('s5b').innerHTML = `High scores sit next to high scores: Moran's <i>I</i> runs from <b>${Math.min(...mi).toFixed(2)}</b> to <b>${Math.max(...mi).toFixed(2)}</b> across the eight types. ` +
+    `<b>${d.corridors.n}</b> corridors of neighbouring shortlisted regions emerge, <b>${d.corridors.cross_border}</b> of them cross-border.`;
+}
+
+function render(t) {
+  scenes(t, SC);
+  const b = Math.max(MK.alpha(t, SC.s1), MK.alpha(t, SC.s6));
+  brand(t, b);
+  $('steps').style.opacity = b;
+  $('src').style.opacity = 1 - MK.alpha(t, SC.s1);
+
+  // map: T1 → T3 → T8 → n_types → corridors
+  const am = Math.max(MK.alpha(t, [6, 24]), MK.alpha(t, [34, 56]));
+  G.map.style.opacity = am;
+  $('leg2').style.opacity = MK.alpha(t, [6, 24]);
+  $('leg4').style.opacity = MK.alpha(t, SC.s4);
+  $('leg5').style.opacity = MK.alpha(t, SC.s5);
+  const w1 = prog(t, 6.5, 9), w3 = prog(t, 12, 13.5), w8 = prog(t, 18, 19.5), wn = prog(t, 34.2, 36), wc = prog(t, 46, 47.5);
+  for (const { r, p } of G.regions) {
+    let c = MK.mix('#12304f', ramp(r.s.T1), w1);
+    c = MK.mix(c, ramp(r.s.T3), w3);
+    c = MK.mix(c, ramp(r.s.T8), w8);
+    c = MK.mix(c, ramp(r.n_types / 8), wn);
+    c = MK.mix(c, ['#12304f', '#3987e5', '#d95926'][r.corridor], wc);
+    p.setAttribute('fill', c);
+  }
+
+  // s3 bars
+  G.s3.style.opacity = MK.alpha(t, SC.s3);
+  const q3 = prog(t, 25, 28), q3t = prog(t, 28, 30);
+  for (const o of G.bars) {
+    o.all.setAttribute('width', o.wa * q3);
+    o.top.setAttribute('width', o.wt * q3t);
+    o.v.setAttribute('x', X0 + 220 + o.wa * q3 + 8);
+    o.v.style.opacity = prog(t, 27.5, 28.5);
+  }
+}
+
+MK.start({ duration: DURATION, build, render, gif: [6, 18], poster: 22 });
+</script>
+</body>
+</html>

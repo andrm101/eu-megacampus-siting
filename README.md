@@ -12,6 +12,12 @@ Consumes the [EU-Innovation-Panel](https://github.com/andrm101/eu-innovation-pan
 
 ---
 
+## The project in 62 seconds
+
+[![Animated suitability maps for AI hubs, semiconductors and quantum anchors](docs/media/megacampus-explainer-preview.gif)](docs/media/megacampus-explainer.mp4)
+
+[Watch the full explainer (MP4, 62 s)](docs/media/megacampus-explainer.mp4). It covers suitability maps for three types, the eight shortlists, multi-type regions and the spatial corridors. The video is drawn in code from the project's own outputs (`assets/motion/`).
+
 ## Site-intelligence at a glance
 
 <p align="center">
